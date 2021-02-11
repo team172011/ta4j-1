@@ -51,8 +51,7 @@ import ta4jexamples.loaders.CsvTradesLoader;
 public class ADXStrategy {
 
     /**
-     * @param series
-     *            a time series
+     * @param series a time series
      * @return an adx indicator based strategy
      */
     public static Strategy buildStrategy(TimeSeries series) {

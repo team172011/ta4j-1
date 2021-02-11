@@ -44,30 +44,34 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
      */
     public enum ConvergenceDivergenceType {
         /**
-         * Returns true for <b>"positiveConvergent"</b> when the values of the ref-{@link Indicator indicator} and the
-         * values of the other-{@link Indicator indicator} increase within the barCount. In short: "other" and "ref"
-         * makes higher highs.
+         * Returns true for <b>"positiveConvergent"</b> when the values of the
+         * ref-{@link Indicator indicator} and the values of the other-{@link Indicator
+         * indicator} increase within the barCount. In short: "other" and "ref" makes
+         * higher highs.
          */
         positiveConvergent,
 
         /**
-         * Returns true for <b>"negativeConvergent"</b> when the values of the ref-{@link Indicator indicator} and the
-         * values of the other-{@link Indicator indicator} decrease within the barCount. In short: "other" and "ref"
-         * makes lower lows.
+         * Returns true for <b>"negativeConvergent"</b> when the values of the
+         * ref-{@link Indicator indicator} and the values of the other-{@link Indicator
+         * indicator} decrease within the barCount. In short: "other" and "ref" makes
+         * lower lows.
          */
         negativeConvergent,
 
         /**
-         * Returns true for <b>"positiveDivergent"</b> when the values of the ref-{@link Indicator indicator} increase
-         * and the values of the other-{@link Indicator indicator} decrease within a barCount. In short: "other" makes
-         * lower lows while "ref" makes higher highs.
+         * Returns true for <b>"positiveDivergent"</b> when the values of the
+         * ref-{@link Indicator indicator} increase and the values of the
+         * other-{@link Indicator indicator} decrease within a barCount. In short:
+         * "other" makes lower lows while "ref" makes higher highs.
          */
         positiveDivergent,
 
         /**
-         * Returns true for <b>"negativeDivergent"</b> when the values of the ref-{@link Indicator indicator} decrease
-         * and the values of the other-{@link Indicator indicator} increase within a barCount. In short: "other" makes
-         * higher highs while "ref" makes lower lows.
+         * Returns true for <b>"negativeDivergent"</b> when the values of the
+         * ref-{@link Indicator indicator} decrease and the values of the
+         * other-{@link Indicator indicator} increase within a barCount. In short:
+         * "other" makes higher highs while "ref" makes lower lows.
          */
         negativeDivergent
     }
@@ -78,30 +82,36 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     public enum ConvergenceDivergenceStrictType {
 
         /**
-         * Returns true for <b>"positiveConvergentStrict"</b> when the values of the ref-{@link Indicator indicator} and
-         * the values of the other-{@link Indicator indicator} increase consecutively within a barCount. In short:
-         * "other" and "ref" makes strict higher highs.
+         * Returns true for <b>"positiveConvergentStrict"</b> when the values of the
+         * ref-{@link Indicator indicator} and the values of the other-{@link Indicator
+         * indicator} increase consecutively within a barCount. In short: "other" and
+         * "ref" makes strict higher highs.
          */
         positiveConvergentStrict,
 
         /**
-         * Returns true for <b>"negativeConvergentStrict"</b> when the values of the ref-{@link Indicator indicator} and
-         * the values of the other-{@link Indicator indicator} decrease consecutively within a barCount. In short:
-         * "other" and "ref" makes strict lower lows.
+         * Returns true for <b>"negativeConvergentStrict"</b> when the values of the
+         * ref-{@link Indicator indicator} and the values of the other-{@link Indicator
+         * indicator} decrease consecutively within a barCount. In short: "other" and
+         * "ref" makes strict lower lows.
          */
         negativeConvergentStrict,
 
         /**
-         * Returns true for <b>"positiveDivergentStrict"</b> when the values of the ref-{@link Indicator indicator}
-         * increase consecutively and the values of the other-{@link Indicator indicator} decrease consecutively within
-         * a barCount. In short: "other" makes strict higher highs and "ref" makes strict lower lows.
+         * Returns true for <b>"positiveDivergentStrict"</b> when the values of the
+         * ref-{@link Indicator indicator} increase consecutively and the values of the
+         * other-{@link Indicator indicator} decrease consecutively within a barCount.
+         * In short: "other" makes strict higher highs and "ref" makes strict lower
+         * lows.
          */
         positiveDivergentStrict,
 
         /**
-         * Returns true for <b>"negativeDivergentStrict"</b> when the values of the ref-{@link Indicator indicator}
-         * decrease consecutively and the values of the other-{@link Indicator indicator} increase consecutively within
-         * a barCount. In short: "other" makes strict lower lows and "ref" makes strict higher highs.
+         * Returns true for <b>"negativeDivergentStrict"</b> when the values of the
+         * ref-{@link Indicator indicator} decrease consecutively and the values of the
+         * other-{@link Indicator indicator} increase consecutively within a barCount.
+         * In short: "other" makes strict lower lows and "ref" makes strict higher
+         * highs.
          */
         negativeDivergentStrict
     }
@@ -131,8 +141,8 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
      * Constructor. <br/>
      * <br/>
      * 
-     * The <b>"minStrength"</b> is the minimum required strength for convergence or divergence and must be a number
-     * between "0.1" and "1.0": <br/>
+     * The <b>"minStrength"</b> is the minimum required strength for convergence or
+     * divergence and must be a number between "0.1" and "1.0": <br/>
      * <br/>
      * 0.1: very weak <br/>
      * 0.8: strong (recommended) <br/>
@@ -140,25 +150,20 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
      * 
      * <br/>
      * 
-     * The <b>"minSlope"</b> is the minimum required slope for convergence or divergence and must be a number between
-     * "0.1" and "1.0": <br/>
+     * The <b>"minSlope"</b> is the minimum required slope for convergence or
+     * divergence and must be a number between "0.1" and "1.0": <br/>
      * <br/>
      * 0.1: very unstrict<br/>
      * 0.3: strict (recommended) <br/>
      * 1.0: very strict <br/>
      * 
-     * @param ref
-     *            the indicator
-     * @param other
-     *            the other indicator
-     * @param barCount
-     *            the time frame
-     * @param type
-     *            of convergence or divergence
-     * @param minStrength
-     *            the minimum required strength for convergence or divergence
-     * @param minSlope
-     *            the minimum required slope for convergence or divergence
+     * @param ref         the indicator
+     * @param other       the other indicator
+     * @param barCount    the time frame
+     * @param type        of convergence or divergence
+     * @param minStrength the minimum required strength for convergence or
+     *                    divergence
+     * @param minSlope    the minimum required slope for convergence or divergence
      */
     public ConvergenceDivergenceIndicator(Indicator<Num> ref, Indicator<Num> other, int barCount,
             ConvergenceDivergenceType type, double minStrength, double minSlope) {
@@ -175,14 +180,10 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor for strong convergence or divergence.
      * 
-     * @param ref
-     *            the indicator
-     * @param other
-     *            the other indicator
-     * @param barCount
-     *            the time frame
-     * @param type
-     *            of convergence or divergence
+     * @param ref      the indicator
+     * @param other    the other indicator
+     * @param barCount the time frame
+     * @param type     of convergence or divergence
      */
     public ConvergenceDivergenceIndicator(Indicator<Num> ref, Indicator<Num> other, int barCount,
             ConvergenceDivergenceType type) {
@@ -199,14 +200,10 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor for strict convergence or divergence.
      * 
-     * @param ref
-     *            the indicator
-     * @param other
-     *            the other indicator
-     * @param barCount
-     *            the time frame
-     * @param strictType
-     *            of strict convergence or divergence
+     * @param ref        the indicator
+     * @param other      the other indicator
+     * @param barCount   the time frame
+     * @param strictType of strict convergence or divergence
      */
     public ConvergenceDivergenceIndicator(Indicator<Num> ref, Indicator<Num> other, int barCount,
             ConvergenceDivergenceStrictType strictType) {
@@ -265,8 +262,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if strict positive convergent
      */
     private Boolean calculatePositiveConvergenceStrict(int index) {
@@ -277,8 +273,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if strict negative convergent
      */
     private Boolean calculateNegativeConvergenceStrict(int index) {
@@ -289,8 +284,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if positive divergent
      */
     private Boolean calculatePositiveDivergenceStrict(int index) {
@@ -301,8 +295,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if negative divergent
      */
     private Boolean calculateNegativeDivergenceStrict(int index) {
@@ -313,8 +306,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if positive convergent
      */
     private Boolean calculatePositiveConvergence(int index) {
@@ -328,8 +320,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if negative convergent
      */
     private Boolean calculateNegativeConvergence(int index) {
@@ -343,8 +334,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if positive divergent
      */
     private Boolean calculatePositiveDivergence(int index) {
@@ -362,8 +352,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return true, if negative divergent
      */
     private Boolean calculateNegativeDivergence(int index) {
@@ -381,8 +370,7 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the actual index
+     * @param index the actual index
      * @return the relative slope
      */
     private Num calculateSlopeRel(int index) {

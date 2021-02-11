@@ -37,8 +37,7 @@ public class LinearBorrowingCostModel implements CostModel {
     /**
      * Constructor. (feePerPeriod * nPeriod)
      * 
-     * @param feePerPeriod
-     *            the coefficient (e.g. 0.0001 for 1bp per period)
+     * @param feePerPeriod the coefficient (e.g. 0.0001 for 1bp per period)
      */
     public LinearBorrowingCostModel(double feePerPeriod) {
         this.feePerPeriod = feePerPeriod;
@@ -52,8 +51,7 @@ public class LinearBorrowingCostModel implements CostModel {
     /**
      * Calculates the borrowing cost of a closed trade.
      * 
-     * @param trade
-     *            the trade
+     * @param trade the trade
      * @return the absolute order cost
      */
     public Num calculate(Trade trade) {
@@ -66,10 +64,8 @@ public class LinearBorrowingCostModel implements CostModel {
     /**
      * Calculates the borrowing cost of a trade.
      * 
-     * @param trade
-     *            the trade
-     * @param currentIndex
-     *            final bar index to be considered (for open trades)
+     * @param trade        the trade
+     * @param currentIndex final bar index to be considered (for open trades)
      * @return the absolute order cost
      */
     public Num calculate(Trade trade, int currentIndex) {
@@ -91,10 +87,8 @@ public class LinearBorrowingCostModel implements CostModel {
     }
 
     /**
-     * @param tradingPeriods
-     *            number of periods
-     * @param tradedValue
-     *            value of the trade initial trade position
+     * @param tradingPeriods number of periods
+     * @param tradedValue    value of the trade initial trade position
      * @return the absolute borrowing cost
      */
     private Num getHoldingCostForPeriods(int tradingPeriods, Num tradedValue) {
@@ -105,8 +99,7 @@ public class LinearBorrowingCostModel implements CostModel {
     /**
      * Evaluate if two models are equal
      * 
-     * @param otherModel
-     *            model to compare with
+     * @param otherModel model to compare with
      */
     public boolean equals(CostModel otherModel) {
         boolean equality = false;

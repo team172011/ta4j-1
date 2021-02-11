@@ -29,7 +29,8 @@ import org.ta4j.core.num.Num;
 /**
  * Linearly Weighted Moving Average (LWMA).
  *
- * @see <a href="https://www.investopedia.com/terms/l/linearlyweightedmovingaverage.asp">
+ * @see <a href=
+ *      "https://www.investopedia.com/terms/l/linearlyweightedmovingaverage.asp">
  *      https://www.investopedia.com/terms/l/linearlyweightedmovingaverage.asp</a>
  */
 public class LWMAIndicator extends CachedIndicator<Num> {

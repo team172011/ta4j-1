@@ -44,8 +44,7 @@ public class MACDIndicator extends CachedIndicator<Num> {
     /**
      * Constructor with shortBarCount "12" and longBarCount "26".
      *
-     * @param indicator
-     *            the indicator
+     * @param indicator the indicator
      */
     public MACDIndicator(Indicator<Num> indicator) {
         this(indicator, 12, 26);
@@ -54,12 +53,9 @@ public class MACDIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator
-     *            the indicator
-     * @param shortBarCount
-     *            the short time frame (normally 12)
-     * @param longBarCount
-     *            the long time frame (normally 26)
+     * @param indicator     the indicator
+     * @param shortBarCount the short time frame (normally 12)
+     * @param longBarCount  the long time frame (normally 26)
      */
     public MACDIndicator(Indicator<Num> indicator, int shortBarCount, int longBarCount) {
         super(indicator);

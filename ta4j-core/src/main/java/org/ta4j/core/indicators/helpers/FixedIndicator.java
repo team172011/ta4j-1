@@ -33,8 +33,7 @@ import java.util.List;
 /**
  * A fixed indicator.
  * 
- * @param <T>
- *            the type of returned value (Double, Boolean, etc.)
+ * @param <T> the type of returned value (Double, Boolean, etc.)
  */
 public class FixedIndicator<T> extends AbstractIndicator<T> {
 
@@ -44,8 +43,7 @@ public class FixedIndicator<T> extends AbstractIndicator<T> {
     /**
      * Constructor.
      * 
-     * @param values
-     *            the values to be returned by this indicator
+     * @param values the values to be returned by this indicator
      */
     @SafeVarargs
     public FixedIndicator(TimeSeries series, T... values) {

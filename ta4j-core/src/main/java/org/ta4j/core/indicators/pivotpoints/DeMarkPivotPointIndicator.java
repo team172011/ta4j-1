@@ -37,7 +37,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * DeMark Pivot Point indicator.
  *
- * @see <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
+ * @see <a href=
+ *      "http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
  *      http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points</a>
  */
 public class DeMarkPivotPointIndicator extends RecursiveCachedIndicator<Num> {
@@ -50,25 +51,31 @@ public class DeMarkPivotPointIndicator extends RecursiveCachedIndicator<Num> {
      *
      * Calculates the deMark pivot point based on the time level parameter.
      * 
-     * @param series
-     *            the time series with adequate endTime of each bar for the given time level.
-     * @param timeLevelId
-     *            the corresponding time level for pivot calculation:
-     *            <ul>
-     *            <li>1-, 5-, 10- and 15-minute charts use the prior days high, low and close: <b>timeLevelId</b> =
-     *            PIVOT_TIME_LEVEL_ID_DAY (= 1)</li>
-     *            <li>30- 60- and 120-minute charts use the prior week's high, low, and close: <b>timeLevelId</b> =
-     *            PIVOT_TIME_LEVEL_ID_WEEK (= 2)</li>
-     *            <li>Pivot Points for daily charts use the prior month's high, low and close: <b>timeLevelId</b> =
-     *            PIVOT_TIME_LEVEL_ID_MONTH (= 3)</li>
-     *            <li>Pivot Points for weekly and monthly charts use the prior year's high, low and close:
-     *            <b>timeLevelId</b> = PIVOT_TIME_LEVEL_ID_YEAR (= 4)</li>
-     *            <li>If you want to use just the last bar data: <b>timeLevelId</b> = PIVOT_TIME_LEVEL_ID_BARBASED (=
-     *            0)</li>
-     *            </ul>
-     *            The user has to make sure that there are enough previous bars to calculate correct pivots at the first
-     *            bar that matters. For example for PIVOT_TIME_LEVEL_ID_MONTH there will be only correct pivot point
-     *            values (and reversals) after the first complete month
+     * @param series      the time series with adequate endTime of each bar for the
+     *                    given time level.
+     * @param timeLevelId the corresponding time level for pivot calculation:
+     *                    <ul>
+     *                    <li>1-, 5-, 10- and 15-minute charts use the prior days
+     *                    high, low and close: <b>timeLevelId</b> =
+     *                    PIVOT_TIME_LEVEL_ID_DAY (= 1)</li>
+     *                    <li>30- 60- and 120-minute charts use the prior week's
+     *                    high, low, and close: <b>timeLevelId</b> =
+     *                    PIVOT_TIME_LEVEL_ID_WEEK (= 2)</li>
+     *                    <li>Pivot Points for daily charts use the prior month's
+     *                    high, low and close: <b>timeLevelId</b> =
+     *                    PIVOT_TIME_LEVEL_ID_MONTH (= 3)</li>
+     *                    <li>Pivot Points for weekly and monthly charts use the
+     *                    prior year's high, low and close: <b>timeLevelId</b> =
+     *                    PIVOT_TIME_LEVEL_ID_YEAR (= 4)</li>
+     *                    <li>If you want to use just the last bar data:
+     *                    <b>timeLevelId</b> = PIVOT_TIME_LEVEL_ID_BARBASED (=
+     *                    0)</li>
+     *                    </ul>
+     *                    The user has to make sure that there are enough previous
+     *                    bars to calculate correct pivots at the first bar that
+     *                    matters. For example for PIVOT_TIME_LEVEL_ID_MONTH there
+     *                    will be only correct pivot point values (and reversals)
+     *                    after the first complete month
      */
     public DeMarkPivotPointIndicator(TimeSeries series, TimeLevel timeLevelId) {
         super(series);
@@ -110,8 +117,7 @@ public class DeMarkPivotPointIndicator extends RecursiveCachedIndicator<Num> {
     /**
      * Calculates the indices of the bars of the previous period
      * 
-     * @param index
-     *            index of the current bar
+     * @param index index of the current bar
      * @return list of indices of the bars of the previous period
      */
     public List<Integer> getBarsOfPreviousPeriod(int index) {

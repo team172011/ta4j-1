@@ -34,7 +34,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * Pivot Reversal Indicator.
  *
- * @see <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
+ * @see <a href=
+ *      "http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
  *      http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points</a>
  */
 public class StandardReversalIndicator extends RecursiveCachedIndicator<Num> {
@@ -47,10 +48,8 @@ public class StandardReversalIndicator extends RecursiveCachedIndicator<Num> {
      *
      * Calculates the (standard) reversal for the corresponding pivot level
      *
-     * @param pivotPointIndicator
-     *            the {@link PivotPointIndicator} for this reversal
-     * @param level
-     *            the {@link PivotLevel} for this reversal
+     * @param pivotPointIndicator the {@link PivotPointIndicator} for this reversal
+     * @param level               the {@link PivotLevel} for this reversal
      */
     public StandardReversalIndicator(PivotPointIndicator pivotPointIndicator, PivotLevel level) {
         super(pivotPointIndicator);

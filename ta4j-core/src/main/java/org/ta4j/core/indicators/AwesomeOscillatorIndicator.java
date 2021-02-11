@@ -42,12 +42,9 @@ public class AwesomeOscillatorIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator
-     *            (normally {@link MedianPriceIndicator})
-     * @param barCountSma1
-     *            (normally 5)
-     * @param barCountSma2
-     *            (normally 34)
+     * @param indicator    (normally {@link MedianPriceIndicator})
+     * @param barCountSma1 (normally 5)
+     * @param barCountSma2 (normally 34)
      */
     public AwesomeOscillatorIndicator(Indicator<Num> indicator, int barCountSma1, int barCountSma2) {
         super(indicator);
@@ -58,8 +55,7 @@ public class AwesomeOscillatorIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator
-     *            (normally {@link MedianPriceIndicator})
+     * @param indicator (normally {@link MedianPriceIndicator})
      */
     public AwesomeOscillatorIndicator(Indicator<Num> indicator) {
         this(indicator, 5, 34);
@@ -68,8 +64,7 @@ public class AwesomeOscillatorIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param series
-     *            the timeSeries
+     * @param series the timeSeries
      */
     public AwesomeOscillatorIndicator(TimeSeries series) {
         this(new MedianPriceIndicator(series), 5, 34);

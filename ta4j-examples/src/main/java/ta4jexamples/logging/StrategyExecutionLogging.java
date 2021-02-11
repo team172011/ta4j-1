@@ -46,8 +46,9 @@ public class StrategyExecutionLogging {
             .getResource("logback-traces.xml");
 
     /**
-     * Loads the Logback configuration from a resource file. Only here to avoid polluting other examples with logs.
-     * Could be replaced by a simple logback.xml file in the resource folder.
+     * Loads the Logback configuration from a resource file. Only here to avoid
+     * polluting other examples with logs. Could be replaced by a simple logback.xml
+     * file in the resource folder.
      */
     private static void loadLoggerConfiguration() {
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();

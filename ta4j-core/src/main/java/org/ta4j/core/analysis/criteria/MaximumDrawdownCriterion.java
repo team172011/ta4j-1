@@ -60,10 +60,8 @@ public class MaximumDrawdownCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the maximum drawdown from a cash flow over a series.
      * 
-     * @param series
-     *            the time series
-     * @param cashFlow
-     *            the cash flow
+     * @param series   the time series
+     * @param cashFlow the cash flow
      * @return the maximum drawdown from a cash flow over a series
      */
     private Num calculateMaximumDrawdown(TimeSeries series, CashFlow cashFlow) {

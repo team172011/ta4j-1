@@ -54,8 +54,7 @@ public class TradingBotOnMovingTimeSeries {
     /**
      * Builds a moving time series (i.e. keeping only the maxBarCount last bars)
      *
-     * @param maxBarCount
-     *            the number of bars to keep in the time series (at maximum)
+     * @param maxBarCount the number of bars to keep in the time series (at maximum)
      * @return a moving time series
      */
     private static TimeSeries initMovingTimeSeries(int maxBarCount) {
@@ -69,8 +68,7 @@ public class TradingBotOnMovingTimeSeries {
     }
 
     /**
-     * @param series
-     *            a time series
+     * @param series a time series
      * @return a dummy strategy
      */
     private static Strategy buildStrategy(TimeSeries series) {
@@ -92,10 +90,8 @@ public class TradingBotOnMovingTimeSeries {
     /**
      * Generates a random decimal number between min and max.
      *
-     * @param min
-     *            the minimum bound
-     * @param max
-     *            the maximum bound
+     * @param min the minimum bound
+     * @param max the maximum bound
      * @return a random decimal number between min and max
      */
     private static Num randDecimal(Num min, Num max) {

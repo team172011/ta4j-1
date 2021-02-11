@@ -31,7 +31,8 @@ import org.ta4j.core.num.Num;
 /**
  * Indicator-highest-indicator rule.
  *
- * Satisfied when the value of the {@link Indicator indicator} is the highest within the barCount.
+ * Satisfied when the value of the {@link Indicator indicator} is the highest
+ * within the barCount.
  */
 public class IsHighestRule extends AbstractRule {
 
@@ -47,10 +48,8 @@ public class IsHighestRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param ref
-     *            the indicator
-     * @param barCount
-     *            the time frame
+     * @param ref      the indicator
+     * @param barCount the time frame
      */
     public IsHighestRule(Indicator<Num> ref, int barCount) {
         this.ref = ref;

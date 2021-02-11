@@ -60,8 +60,9 @@ import java.util.function.Function;
 import static org.ta4j.core.num.NaN.NaN;
 
 /**
- * Representation of arbitrary precision BigDecimal. A {@code Num} consists of a {@code BigDecimal} with arbitrary
- * {@link MathContext} (precision and rounding mode).
+ * Representation of arbitrary precision BigDecimal. A {@code Num} consists of a
+ * {@code BigDecimal} with arbitrary {@link MathContext} (precision and rounding
+ * mode).
  *
  * @see BigDecimal
  * @see MathContext
@@ -80,8 +81,7 @@ public final class PrecisionNum implements Num {
     /**
      * Constructor.
      *
-     * @param val
-     *            the string representation of the Num value
+     * @param val the string representation of the Num value
      */
     private PrecisionNum(String val) {
         delegate = new BigDecimal(val);
@@ -90,12 +90,11 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Constructor. Above double precision, only String parameters can represent the value.
+     * Constructor. Above double precision, only String parameters can represent the
+     * value.
      *
-     * @param val
-     *            the string representation of the Num value
-     * @param precision
-     *            the int precision of the Num value
+     * @param val       the string representation of the Num value
+     * @param precision the int precision of the Num value
      */
     private PrecisionNum(String val, int precision) {
         mathContext = new MathContext(precision, RoundingMode.HALF_UP);
@@ -135,8 +134,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code String}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(String val) {
@@ -151,8 +149,7 @@ public final class PrecisionNum implements Num {
      *
      * @param val the number
      * 
-     * @param precision
-     *            the precision
+     * @param precision the precision
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(String val, int precision) {
@@ -165,8 +162,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code short}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(short val) {
@@ -176,8 +172,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code int}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(int val) {
@@ -187,8 +182,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code long}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(long val) {
@@ -198,8 +192,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code float}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(float val) {
@@ -220,8 +213,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code double}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(double val) {
@@ -234,8 +226,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} version of the given {@code Num}.
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(PrecisionNum val) {
@@ -243,11 +234,10 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} version of the given {@code Number}. Warning: This method turns the number into a string
-     * first
+     * Returns a {@code Num} version of the given {@code Number}. Warning: This
+     * method turns the number into a string first
      *
-     * @param val
-     *            the number
+     * @param val the number
      * @return the {@code Num}
      */
     public static PrecisionNum valueOf(Number val) {
@@ -295,10 +285,10 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is {@code (this - augend)}, with rounding according to the context settings.
+     * Returns a {@code Num} whose value is {@code (this - augend)}, with rounding
+     * according to the context settings.
      *
-     * @param subtrahend
-     *            value to be subtracted from this {@code Num}.
+     * @param subtrahend value to be subtracted from this {@code Num}.
      * @return {@code this - subtrahend}, rounded as necessary
      * @see BigDecimal#subtract(java.math.BigDecimal, java.math.MathContext)
      */
@@ -314,11 +304,10 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is {@code this * multiplicand}, with rounding according to the context
-     * settings.
+     * Returns a {@code Num} whose value is {@code this * multiplicand}, with
+     * rounding according to the context settings.
      *
-     * @param multiplicand
-     *            value to be multiplied by this {@code Num}.
+     * @param multiplicand value to be multiplied by this {@code Num}.
      * @return {@code this * multiplicand}, rounded as necessary
      * @see BigDecimal#multiply(java.math.BigDecimal, java.math.MathContext)
      */
@@ -334,10 +323,10 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is {@code (this / divisor)}, with rounding according to the context settings.
+     * Returns a {@code Num} whose value is {@code (this / divisor)}, with rounding
+     * according to the context settings.
      *
-     * @param divisor
-     *            value by which this {@code Num} is to be divided.
+     * @param divisor value by which this {@code Num} is to be divided.
      * @return {@code this / divisor}, rounded as necessary
      * @see BigDecimal#divide(java.math.BigDecimal, java.math.MathContext)
      */
@@ -353,10 +342,10 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is {@code (this % divisor)}, with rounding according to the context settings.
+     * Returns a {@code Num} whose value is {@code (this % divisor)}, with rounding
+     * according to the context settings.
      *
-     * @param divisor
-     *            value by which this {@code Num} is to be divided.
+     * @param divisor value by which this {@code Num} is to be divided.
      * @return {@code this % divisor}, rounded as necessary.
      * @see BigDecimal#remainder(java.math.BigDecimal, java.math.MathContext)
      */
@@ -369,7 +358,8 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is rounded down to the nearest whole number.
+     * Returns a {@code Num} whose value is rounded down to the nearest whole
+     * number.
      *
      * @return <tt>this<sup>n</sup></tt>
      */
@@ -391,8 +381,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code Num} whose value is <tt>(this<sup>n</sup>)</tt>.
      *
-     * @param n
-     *            power to raise this {@code Num} to.
+     * @param n power to raise this {@code Num} to.
      * @return <tt>this<sup>n</sup></tt>
      * @see BigDecimal#pow(int, java.math.MathContext)
      */
@@ -404,7 +393,8 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns the correctly rounded positive square root of this {@code Num}. /!\ Warning! Uses DEFAULT_PRECISION.
+     * Returns the correctly rounded positive square root of this {@code Num}. /!\
+     * Warning! Uses DEFAULT_PRECISION.
      *
      * @return the positive square root of {@code this}
      * @see PrecisionNum#sqrt(int)
@@ -416,8 +406,7 @@ public final class PrecisionNum implements Num {
     /**
      * Returns a {@code num} whose value is <tt>√(this)</tt>.
      *
-     * @param precision
-     *            to calculate.
+     * @param precision to calculate.
      * @return <tt>this<sup>n</sup></tt>
      */
     @Override
@@ -490,7 +479,8 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * Returns a {@code Num} whose value is the natural logarithm of this {@code Num}.
+     * Returns a {@code Num} whose value is the natural logarithm of this
+     * {@code Num}.
      *
      * @return {@code log(this)}
      */
@@ -587,8 +577,7 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value is equal to another.
      *
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return true is this is greater than the specified value, false otherwise
      */
     @Override
@@ -599,11 +588,10 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value matches another to a precision.
      *
-     * @param other
-     *            the other value, not null
-     * @param precision
-     *            the int precision
-     * @return true is this matches the specified value to a precision, false otherwise
+     * @param other     the other value, not null
+     * @param precision the int precision
+     * @return true is this matches the specified value to a precision, false
+     *         otherwise
      */
     public boolean matches(Num other, int precision) {
         Num otherNum = PrecisionNum.valueOf(other.toString(), precision);
@@ -619,11 +607,10 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value matches another within an offset.
      *
-     * @param other
-     *            the other value, not null
-     * @param delta
-     *            the {@link Num} offset
-     * @return true is this matches the specified value within an offset, false otherwise
+     * @param other the other value, not null
+     * @param delta the {@link Num} offset
+     * @return true is this matches the specified value within an offset, false
+     *         otherwise
      */
     public boolean matches(Num other, Num delta) {
         Num result = this.minus(other);
@@ -638,8 +625,7 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value is greater than another.
      *
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return true is this is greater than the specified value, false otherwise
      */
     @Override
@@ -650,9 +636,9 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value is greater than or equal to another.
      *
-     * @param other
-     *            the other value, not null
-     * @return true is this is greater than or equal to the specified value, false otherwise
+     * @param other the other value, not null
+     * @return true is this is greater than or equal to the specified value, false
+     *         otherwise
      */
     @Override
     public boolean isGreaterThanOrEqual(Num other) {
@@ -662,8 +648,7 @@ public final class PrecisionNum implements Num {
     /**
      * Checks if this value is less than another.
      *
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return true is this is less than the specified value, false otherwise
      */
     @Override
@@ -684,10 +669,10 @@ public final class PrecisionNum implements Num {
     /**
      * Returns the minimum of this {@code Num} and {@code other}.
      *
-     * @param other
-     *            value with which the minimum is to be computed
-     * @return the {@code Num} whose value is the lesser of this {@code Num} and {@code other}. If they are equal, as
-     *         defined by the {@link #compareTo(Num) compareTo} method, {@code this} is returned.
+     * @param other value with which the minimum is to be computed
+     * @return the {@code Num} whose value is the lesser of this {@code Num} and
+     *         {@code other}. If they are equal, as defined by the
+     *         {@link #compareTo(Num) compareTo} method, {@code this} is returned.
      */
     @Override
     public Num min(Num other) {
@@ -697,10 +682,10 @@ public final class PrecisionNum implements Num {
     /**
      * Returns the maximum of this {@code Num} and {@code other}.
      *
-     * @param other
-     *            value with which the maximum is to be computed
-     * @return the {@code Num} whose value is the greater of this {@code Num} and {@code other}. If they are equal, as
-     *         defined by the {@link #compareTo(Num) compareTo} method, {@code this} is returned.
+     * @param other value with which the maximum is to be computed
+     * @return the {@code Num} whose value is the greater of this {@code Num} and
+     *         {@code other}. If they are equal, as defined by the
+     *         {@link #compareTo(Num) compareTo} method, {@code this} is returned.
      */
     @Override
     public Num max(Num other) {
@@ -713,7 +698,8 @@ public final class PrecisionNum implements Num {
     }
 
     /**
-     * {@inheritDoc} Warning: This method returns true if `this` and `obj` are both NaN.NaN.
+     * {@inheritDoc} Warning: This method returns true if `this` and `obj` are both
+     * NaN.NaN.
      */
     @Override
     public boolean equals(Object obj) {
@@ -741,7 +727,8 @@ public final class PrecisionNum implements Num {
         // remainder 0 <= b < 1
         // So:
         // x^a uses PrecisionNum ((PrecisionNum) x).pow(int a) cannot overflow Num
-        // x^b uses double Math.pow(double x, double b) cannot overflow double because b < 1.
+        // x^b uses double Math.pow(double x, double b) cannot overflow double because b
+        // < 1.
         // As suggested: https://stackoverflow.com/a/3590314
 
         // get n = a+b, same precision as n

@@ -62,7 +62,8 @@ public class Quickstart {
         // Here is the same close price:
         System.out.println(firstClosePrice.isEqual(closePrice.getValue(0))); // equal to firstClosePrice
 
-        // Getting the simple moving average (SMA) of the close price over the last 5 bars
+        // Getting the simple moving average (SMA) of the close price over the last 5
+        // bars
         SMAIndicator shortSma = new SMAIndicator(closePrice, 5);
         // Here is the 5-bars-SMA value at the 42nd index
         System.out.println("5-bars-SMA value at the 42nd index: " + shortSma.getValue(42).doubleValue());

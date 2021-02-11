@@ -35,7 +35,8 @@ import java.util.List;
 /**
  * Value at Risk criterion.
  *
- * @see <a href="https://en.wikipedia.org/wiki/Value_at_risk">https://en.wikipedia.org/wiki/Value_at_risk</a>
+ * @see <a href=
+ *      "https://en.wikipedia.org/wiki/Value_at_risk">https://en.wikipedia.org/wiki/Value_at_risk</a>
  */
 public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {
     /**
@@ -46,8 +47,7 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {
     /**
      * Constructor
      *
-     * @param confidence
-     *            the confidence level
+     * @param confidence the confidence level
      */
     public ValueAtRiskCriterion(Double confidence) {
         this.confidence = confidence;
@@ -71,10 +71,8 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the VaR on the return series
      * 
-     * @param returns
-     *            the corresponding returns
-     * @param confidence
-     *            the confidence level
+     * @param returns    the corresponding returns
+     * @param confidence the confidence level
      * @return the relative Value at Risk
      */
     private static Num calculateVaR(Returns returns, double confidence) {

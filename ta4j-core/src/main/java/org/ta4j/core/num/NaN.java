@@ -26,7 +26,8 @@ package org.ta4j.core.num;
 import java.util.function.Function;
 
 /**
- * Representation of an undefined or unrepresentable value: NaN (not a number) <br>
+ * Representation of an undefined or unrepresentable value: NaN (not a number)
+ * <br>
  * Special behavior in methods such as:
  * <ul>
  * <li>{@link NaN#plus(Num)} => NaN</li>
@@ -36,7 +37,8 @@ import java.util.function.Function;
  * <li>{@link NaN#min(Num)} => NaN</li>
  * <li>{@link NaN#max(Num)} => NaN</li>
  * <li>{@link NaN#doubleValue()} => {@link Double#NaN}</li>
- * <li>{@link NaN#intValue()} => throws {@link UnsupportedOperationException}</li>
+ * <li>{@link NaN#intValue()} => throws
+ * {@link UnsupportedOperationException}</li>
  * </ul>
  */
 public class NaN implements Num {
@@ -172,8 +174,7 @@ public class NaN implements Num {
     /**
      * NaN.isEqual(NaN) -> true
      * 
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return flase if both values are not NaN
      */
     @Override

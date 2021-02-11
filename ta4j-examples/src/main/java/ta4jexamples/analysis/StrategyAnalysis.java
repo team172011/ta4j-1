@@ -32,7 +32,8 @@ import ta4jexamples.loaders.CsvTradesLoader;
 import ta4jexamples.strategies.MovingMomentumStrategy;
 
 /**
- * This class diplays analysis criterion values after running a trading strategy over a time series.
+ * This class diplays analysis criterion values after running a trading strategy
+ * over a time series.
  */
 public class StrategyAnalysis {
 

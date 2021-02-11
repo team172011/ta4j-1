@@ -30,7 +30,8 @@ import org.ta4j.core.num.Num;
  * Percentage price oscillator (PPO) indicator. <br/>
  * Aka. MACD Percentage Price Oscillator (MACD-PPO).
  *
- * @see <a href="https://www.investopedia.com/terms/p/ppo.asp">https://www.investopedia.com/terms/p/ppo.asp</a>
+ * @see <a href=
+ *      "https://www.investopedia.com/terms/p/ppo.asp">https://www.investopedia.com/terms/p/ppo.asp</a>
  */
 public class PPOIndicator extends CachedIndicator<Num> {
 
@@ -42,8 +43,7 @@ public class PPOIndicator extends CachedIndicator<Num> {
     /**
      * Constructor with shortBarCount "12" and longBarCount "26".
      *
-     * @param indicator
-     *            the indicator
+     * @param indicator the indicator
      */
     public PPOIndicator(Indicator<Num> indicator) {
         this(indicator, 12, 26);
@@ -52,12 +52,9 @@ public class PPOIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator
-     *            the indicator
-     * @param shortBarCount
-     *            the short time frame
-     * @param longBarCount
-     *            the long time frame
+     * @param indicator     the indicator
+     * @param shortBarCount the short time frame
+     * @param longBarCount  the long time frame
      */
     public PPOIndicator(Indicator<Num> indicator, int shortBarCount, int longBarCount) {
         super(indicator);

@@ -39,8 +39,7 @@ public class BullishHaramiIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor.
      * 
-     * @param series
-     *            a time series
+     * @param series a time series
      */
     public BullishHaramiIndicator(TimeSeries series) {
         super(series);

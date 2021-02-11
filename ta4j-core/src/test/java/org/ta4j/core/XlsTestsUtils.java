@@ -52,16 +52,15 @@ import org.ta4j.core.num.Num;
 public class XlsTestsUtils {
 
     /**
-     * Returns the first Sheet (mutable) from a workbook with the file name in the test class's resources.
+     * Returns the first Sheet (mutable) from a workbook with the file name in the
+     * test class's resources.
      * 
-     * @param clazz
-     *            class containing the file resources
-     * @param fileName
-     *            file name of the file containing the workbook
+     * @param clazz    class containing the file resources
+     * @param fileName file name of the file containing the workbook
      * @return Sheet number zero from the workbook (mutable)
-     * @throws IOException
-     *             if inputStream returned by getResourceAsStream is null or if HSSFWorkBook constructor throws
-     *             IOException or if close throws IOException
+     * @throws IOException if inputStream returned by getResourceAsStream is null or
+     *                     if HSSFWorkBook constructor throws IOException or if
+     *                     close throws IOException
      */
     private static Sheet getSheet(Class<?> clazz, String fileName) throws IOException {
         InputStream inputStream = clazz.getResourceAsStream(fileName);
@@ -75,16 +74,15 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Writes the parameters into the second column of the parameters section of a mutable sheet. The parameters section
-     * starts after the parameters section header. There must be at least params.size() rows between the parameters
-     * section header and the data section header or part of the data section will be overwritten.
+     * Writes the parameters into the second column of the parameters section of a
+     * mutable sheet. The parameters section starts after the parameters section
+     * header. There must be at least params.size() rows between the parameters
+     * section header and the data section header or part of the data section will
+     * be overwritten.
      * 
-     * @param sheet
-     *            mutable Sheet
-     * @param params
-     *            parameters to write
-     * @throws DataFormatException
-     *             if the parameters section header is not found
+     * @param sheet  mutable Sheet
+     * @param params parameters to write
+     * @throws DataFormatException if the parameters section header is not found
      */
     private static void setParams(Sheet sheet, Num... params) throws DataFormatException {
         FormulaEvaluator evaluator = sheet.getWorkbook().getCreationHelper().createFormulaEvaluator();
@@ -111,15 +109,11 @@ public class XlsTestsUtils {
     /**
      * Gets the TimeSeries from a file.
      * 
-     * @param clazz
-     *            class containing the file resources
-     * @param fileName
-     *            file name of the file resource
+     * @param clazz    class containing the file resources
+     * @param fileName file name of the file resource
      * @return TimeSeries of the data
-     * @throws IOException
-     *             if getSheet throws IOException
-     * @throws DataFormatException
-     *             if getSeries throws DataFormatException
+     * @throws IOException         if getSheet throws IOException
+     * @throws DataFormatException if getSeries throws DataFormatException
      */
     public static TimeSeries getSeries(Class<?> clazz, String fileName, Function<Number, Num> numFunction)
             throws IOException, DataFormatException {
@@ -128,14 +122,14 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Gets a TimeSeries from the data section of a mutable Sheet. Data follows a data section header and appears in the
-     * first six columns to the end of the file. Empty cells in the data are forbidden.
+     * Gets a TimeSeries from the data section of a mutable Sheet. Data follows a
+     * data section header and appears in the first six columns to the end of the
+     * file. Empty cells in the data are forbidden.
      * 
-     * @param sheet
-     *            mutable Sheet
+     * @param sheet mutable Sheet
      * @return TimeSeries of the data
-     * @throws DataFormatException
-     *             if getData throws DataFormatException or if the data contains empty cells
+     * @throws DataFormatException if getData throws DataFormatException or if the
+     *                             data contains empty cells
      */
     private static TimeSeries getSeries(Sheet sheet, Function<Number, Num> numFunction) throws DataFormatException {
         TimeSeries series = new BaseTimeSeriesBuilder().withNumTypeOf(numFunction).build();
@@ -181,17 +175,14 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Converts Object parameters into Num parameters and calls getValues on a column of a mutable sheet.
+     * Converts Object parameters into Num parameters and calls getValues on a
+     * column of a mutable sheet.
      * 
-     * @param sheet
-     *            mutable Sheet
-     * @param column
-     *            column number of the values to get
-     * @param params
-     *            Object parameters to convert to Num
+     * @param sheet  mutable Sheet
+     * @param column column number of the values to get
+     * @param params Object parameters to convert to Num
      * @return List<Num> of values from the column
-     * @throws DataFormatException
-     *             if getValues returns DataFormatException
+     * @throws DataFormatException if getValues returns DataFormatException
      */
     private static List<Num> getValues(Sheet sheet, int column, Function<Number, Num> numFunction, Object... params)
             throws DataFormatException {
@@ -201,17 +192,16 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Writes the parameters to a mutable Sheet then gets the values from the column.
+     * Writes the parameters to a mutable Sheet then gets the values from the
+     * column.
      * 
-     * @param sheet
-     *            mutable Sheet
-     * @param column
-     *            column number of the values to get
-     * @param params
-     *            Num parameters to write to the Sheet
-     * @return List<Num> of values from the column after the parameters have been written
-     * @throws DataFormatException
-     *             if setParams or getValues throws DataFormatException
+     * @param sheet  mutable Sheet
+     * @param column column number of the values to get
+     * @param params Num parameters to write to the Sheet
+     * @return List<Num> of values from the column after the parameters have been
+     *         written
+     * @throws DataFormatException if setParams or getValues throws
+     *                             DataFormatException
      */
     private static List<Num> getValues(Sheet sheet, int column, Function<Number, Num> numFunction, Num... params)
             throws DataFormatException {
@@ -220,15 +210,13 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Gets the values in a column of the data section of a sheet. Rows with an empty first cell are ignored.
+     * Gets the values in a column of the data section of a sheet. Rows with an
+     * empty first cell are ignored.
      * 
-     * @param sheet
-     *            mutable Sheet
-     * @param column
-     *            column number of the values to get
+     * @param sheet  mutable Sheet
+     * @param column column number of the values to get
      * @return List<Num> of values from the column
-     * @throws DataFormatException
-     *             if getData throws DataFormatException
+     * @throws DataFormatException if getData throws DataFormatException
      */
     private static List<Num> getValues(Sheet sheet, int column, Function<Number, Num> numFunction)
             throws DataFormatException {
@@ -252,14 +240,12 @@ public class XlsTestsUtils {
     }
 
     /**
-     * Gets all data rows in the data section, following the data section header to the end of the sheet. Skips rows
-     * that start with "//" as data comments.
+     * Gets all data rows in the data section, following the data section header to
+     * the end of the sheet. Skips rows that start with "//" as data comments.
      * 
-     * @param sheet
-     *            mutable Sheet
+     * @param sheet mutable Sheet
      * @return List<Row> of the data rows
-     * @throws DataFormatException
-     *             if the data section header is not found.
+     * @throws DataFormatException if the data section header is not found.
      */
     private static List<Row> getData(Sheet sheet) throws DataFormatException {
         FormulaEvaluator evaluator = sheet.getWorkbook().getCreationHelper().createFormulaEvaluator();
@@ -296,19 +282,14 @@ public class XlsTestsUtils {
     /**
      * Gets an Indicator from a column of an XLS file parameters.
      * 
-     * @param clazz
-     *            class containing the file resource
-     * @param fileName
-     *            file name of the file resource
-     * @param column
-     *            column number of the indicator values
-     * @param params
-     *            indicator parameters
+     * @param clazz    class containing the file resource
+     * @param fileName file name of the file resource
+     * @param column   column number of the indicator values
+     * @param params   indicator parameters
      * @return Indicator<Num> as calculated by the XLS file given the parameters
-     * @throws IOException
-     *             if getSheet throws IOException
-     * @throws DataFormatException
-     *             if getSeries or getValues throws DataFormatException
+     * @throws IOException         if getSheet throws IOException
+     * @throws DataFormatException if getSeries or getValues throws
+     *                             DataFormatException
      */
     public static Indicator<Num> getIndicator(Class<?> clazz, String fileName, int column,
             Function<Number, Num> numFunction, Object... params) throws IOException, DataFormatException {
@@ -319,19 +300,14 @@ public class XlsTestsUtils {
     /**
      * Gets the final criterion value from a column of an XLS file given parameters.
      * 
-     * @param clazz
-     *            test class containing the file resources
-     * @param fileName
-     *            file name of the file resource
-     * @param column
-     *            column number of the calculated criterion values
-     * @param params
-     *            criterion parameters
-     * @return Num final criterion value as calculated by the XLS file given the parameters
-     * @throws IOException
-     *             if getSheet throws IOException
-     * @throws DataFormatException
-     *             if getValues throws DataFormatException
+     * @param clazz    test class containing the file resources
+     * @param fileName file name of the file resource
+     * @param column   column number of the calculated criterion values
+     * @param params   criterion parameters
+     * @return Num final criterion value as calculated by the XLS file given the
+     *         parameters
+     * @throws IOException         if getSheet throws IOException
+     * @throws DataFormatException if getValues throws DataFormatException
      */
     public static Num getFinalCriterionValue(Class<?> clazz, String fileName, int column,
             Function<Number, Num> numFunction, Object... params) throws IOException, DataFormatException {
@@ -343,17 +319,12 @@ public class XlsTestsUtils {
     /**
      * Gets the trading record from an XLS file.
      * 
-     * @param clazz
-     *            the test class containing the file resources
-     * @param fileName
-     *            file name of the file resource
-     * @param column
-     *            column number of the trading record
+     * @param clazz    the test class containing the file resources
+     * @param fileName file name of the file resource
+     * @param column   column number of the trading record
      * @return TradingRecord from the file
-     * @throws IOException
-     *             if getSheet throws IOException
-     * @throws DataFormatException
-     *             if getValues throws DataFormatException
+     * @throws IOException         if getSheet throws IOException
+     * @throws DataFormatException if getValues throws DataFormatException
      */
     public static TradingRecord getTradingRecord(Class<?> clazz, String fileName, int column,
             Function<Number, Num> numFunction) throws IOException, DataFormatException {

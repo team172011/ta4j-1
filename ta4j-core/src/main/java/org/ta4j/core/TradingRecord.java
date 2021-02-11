@@ -34,7 +34,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * A history/record of a trading session.
  *
- * Holds the full trading record when running a {@link Strategy strategy}. It is used to:
+ * Holds the full trading record when running a {@link Strategy strategy}. It is
+ * used to:
  * <ul>
  * <li>check to satisfaction of some trading rules (when running a strategy)
  * <li>analyze the performance of a trading strategy
@@ -50,8 +51,7 @@ public interface TradingRecord extends Serializable {
     /**
      * Operates an order in the trading record.
      * 
-     * @param index
-     *            the index to operate the order
+     * @param index the index to operate the order
      */
     default void operate(int index) {
         operate(index, NaN, NaN);
@@ -60,20 +60,16 @@ public interface TradingRecord extends Serializable {
     /**
      * Operates an order in the trading record.
      * 
-     * @param index
-     *            the index to operate the order
-     * @param price
-     *            the price of the order
-     * @param amount
-     *            the amount to be ordered
+     * @param index  the index to operate the order
+     * @param price  the price of the order
+     * @param amount the amount to be ordered
      */
     void operate(int index, Num price, Num amount);
 
     /**
      * Operates an entry order in the trading record.
      * 
-     * @param index
-     *            the index to operate the entry
+     * @param index the index to operate the entry
      * @return true if the entry has been operated, false otherwise
      */
     default boolean enter(int index) {
@@ -83,12 +79,9 @@ public interface TradingRecord extends Serializable {
     /**
      * Operates an entry order in the trading record.
      * 
-     * @param index
-     *            the index to operate the entry
-     * @param price
-     *            the price of the order
-     * @param amount
-     *            the amount to be ordered
+     * @param index  the index to operate the entry
+     * @param price  the price of the order
+     * @param amount the amount to be ordered
      * @return true if the entry has been operated, false otherwise
      */
     boolean enter(int index, Num price, Num amount);
@@ -96,8 +89,7 @@ public interface TradingRecord extends Serializable {
     /**
      * Operates an exit order in the trading record.
      * 
-     * @param index
-     *            the index to operate the exit
+     * @param index the index to operate the exit
      * @return true if the exit has been operated, false otherwise
      */
     default boolean exit(int index) {
@@ -107,12 +99,9 @@ public interface TradingRecord extends Serializable {
     /**
      * Operates an exit order in the trading record.
      * 
-     * @param index
-     *            the index to operate the exit
-     * @param price
-     *            the price of the order
-     * @param amount
-     *            the amount to be ordered
+     * @param index  the index to operate the exit
+     * @param price  the price of the order
+     * @param amount the amount to be ordered
      * @return true if the exit has been operated, false otherwise
      */
     boolean exit(int index, Num price, Num amount);
@@ -153,8 +142,7 @@ public interface TradingRecord extends Serializable {
     Order getLastOrder();
 
     /**
-     * @param orderType
-     *            the type of the order to get the last of
+     * @param orderType the type of the order to get the last of
      * @return the last order (of the provided type) recorded
      */
     Order getLastOrder(OrderType orderType);

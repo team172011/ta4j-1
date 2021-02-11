@@ -35,7 +35,8 @@ import java.util.function.Function;
 /**
  * End bar of a time period.
  *
- * Bar object is aggregated open/high/low/close/volume/etc. data over a time period.
+ * Bar object is aggregated open/high/low/close/volume/etc. data over a time
+ * period.
  */
 public interface Bar extends Serializable {
     /**
@@ -89,10 +90,9 @@ public interface Bar extends Serializable {
     ZonedDateTime getEndTime();
 
     /**
-     * @param timestamp
-     *            a timestamp
-     * @return true if the provided timestamp is between the begin time and the end time of the current period, false
-     *         otherwise
+     * @param timestamp a timestamp
+     * @return true if the provided timestamp is between the begin time and the end
+     *         time of the current period, false otherwise
      */
     default boolean inPeriod(ZonedDateTime timestamp) {
         return timestamp != null && !timestamp.isBefore(getBeginTime()) && timestamp.isBefore(getEndTime());
@@ -133,10 +133,8 @@ public interface Bar extends Serializable {
     /**
      * Adds a trade at the end of bar period.
      * 
-     * @param tradeVolume
-     *            the traded volume
-     * @param tradePrice
-     *            the price
+     * @param tradeVolume the traded volume
+     * @param tradePrice  the price
      * @deprecated use corresponding function of TimeSeries
      */
     @Deprecated
@@ -147,10 +145,8 @@ public interface Bar extends Serializable {
     /**
      * Adds a trade at the end of bar period.
      * 
-     * @param tradeVolume
-     *            the traded volume
-     * @param tradePrice
-     *            the price
+     * @param tradeVolume the traded volume
+     * @param tradePrice  the price
      * @deprecated use corresponding function of TimeSeries
      */
     @Deprecated
@@ -161,10 +157,8 @@ public interface Bar extends Serializable {
     /**
      * Adds a trade at the end of bar period.
      * 
-     * @param tradeVolume
-     *            the traded volume
-     * @param tradePrice
-     *            the price
+     * @param tradeVolume the traded volume
+     * @param tradePrice  the price
      */
     void addTrade(Num tradeVolume, Num tradePrice);
 

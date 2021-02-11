@@ -30,7 +30,8 @@ import org.ta4j.core.TradingRecord;
 import static org.ta4j.core.Order.OrderType;
 
 /**
- * A {@link org.ta4j.core.Rule} which waits for a number of {@link Bar} after an order.
+ * A {@link org.ta4j.core.Rule} which waits for a number of {@link Bar} after an
+ * order.
  *
  * Satisfied after a fixed number of bars since the last order.
  */
@@ -49,10 +50,8 @@ public class WaitForRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param orderType
-     *            the type of the order since we have to wait for
-     * @param numberOfBars
-     *            the number of bars to wait for
+     * @param orderType    the type of the order since we have to wait for
+     * @param numberOfBars the number of bars to wait for
      */
     public WaitForRule(OrderType orderType, int numberOfBars) {
         this.orderType = orderType;

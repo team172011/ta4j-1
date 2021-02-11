@@ -34,7 +34,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * DeMark Reversal Indicator.
  *
- * @see <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
+ * @see <a href=
+ *      "http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
  *      http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points</a>
  */
 public class DeMarkReversalIndicator extends RecursiveCachedIndicator<Num> {
@@ -52,10 +53,10 @@ public class DeMarkReversalIndicator extends RecursiveCachedIndicator<Num> {
      *
      * Calculates the DeMark reversal for the corresponding pivot level
      * 
-     * @param pivotPointIndicator
-     *            the {@link DeMarkPivotPointIndicator} for this reversal
-     * @param level
-     *            the {@link DeMarkPivotLevel} for this reversal (RESISTANT, SUPPORT)
+     * @param pivotPointIndicator the {@link DeMarkPivotPointIndicator} for this
+     *                            reversal
+     * @param level               the {@link DeMarkPivotLevel} for this reversal
+     *                            (RESISTANT, SUPPORT)
      */
     public DeMarkReversalIndicator(DeMarkPivotPointIndicator pivotPointIndicator, DeMarkPivotLevel level) {
         super(pivotPointIndicator);

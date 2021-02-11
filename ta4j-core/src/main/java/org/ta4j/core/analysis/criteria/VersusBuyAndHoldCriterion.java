@@ -29,8 +29,8 @@ import org.ta4j.core.num.Num;
 /**
  * Versus "buy and hold" criterion.
  *
- * Compares the value of a provided {@link AnalysisCriterion criterion} with the value of a {@link BuyAndHoldCriterion
- * "buy and hold" criterion}.
+ * Compares the value of a provided {@link AnalysisCriterion criterion} with the
+ * value of a {@link BuyAndHoldCriterion "buy and hold" criterion}.
  */
 public class VersusBuyAndHoldCriterion extends AbstractAnalysisCriterion {
 
@@ -39,8 +39,7 @@ public class VersusBuyAndHoldCriterion extends AbstractAnalysisCriterion {
     /**
      * Constructor.
      * 
-     * @param criterion
-     *            an analysis criterion to be compared
+     * @param criterion an analysis criterion to be compared
      */
     public VersusBuyAndHoldCriterion(AnalysisCriterion criterion) {
         this.criterion = criterion;

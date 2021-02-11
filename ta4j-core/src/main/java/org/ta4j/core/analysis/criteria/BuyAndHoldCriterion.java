@@ -31,7 +31,8 @@ import org.ta4j.core.num.Num;
 /**
  * Buy and hold criterion.
  *
- * @see <a href="http://en.wikipedia.org/wiki/Buy_and_hold">http://en.wikipedia.org/wiki/Buy_and_hold</a>
+ * @see <a href=
+ *      "http://en.wikipedia.org/wiki/Buy_and_hold">http://en.wikipedia.org/wiki/Buy_and_hold</a>
  */
 public class BuyAndHoldCriterion extends AbstractAnalysisCriterion {
 

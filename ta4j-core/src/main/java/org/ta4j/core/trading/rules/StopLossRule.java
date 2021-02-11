@@ -53,10 +53,8 @@ public class StopLossRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param closePrice
-     *            the close price indicator
-     * @param lossPercentage
-     *            the loss percentage
+     * @param closePrice     the close price indicator
+     * @param lossPercentage the loss percentage
      */
     public StopLossRule(ClosePriceIndicator closePrice, Number lossPercentage) {
         this(closePrice, closePrice.numOf(lossPercentage));
@@ -65,10 +63,8 @@ public class StopLossRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param closePrice
-     *            the close price indicator
-     * @param lossPercentage
-     *            the loss percentage
+     * @param closePrice     the close price indicator
+     * @param lossPercentage the loss percentage
      */
     public StopLossRule(ClosePriceIndicator closePrice, Num lossPercentage) {
         this.closePrice = closePrice;

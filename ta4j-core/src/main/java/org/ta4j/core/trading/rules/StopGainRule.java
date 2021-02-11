@@ -53,10 +53,8 @@ public class StopGainRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param closePrice
-     *            the close price indicator
-     * @param gainPercentage
-     *            the gain percentage
+     * @param closePrice     the close price indicator
+     * @param gainPercentage the gain percentage
      */
     public StopGainRule(ClosePriceIndicator closePrice, Number gainPercentage) {
         this(closePrice, closePrice.numOf(gainPercentage));
@@ -65,10 +63,8 @@ public class StopGainRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param closePrice
-     *            the close price indicator
-     * @param gainPercentage
-     *            the gain percentage
+     * @param closePrice     the close price indicator
+     * @param gainPercentage the gain percentage
      */
     public StopGainRule(ClosePriceIndicator closePrice, Num gainPercentage) {
         this.closePrice = closePrice;

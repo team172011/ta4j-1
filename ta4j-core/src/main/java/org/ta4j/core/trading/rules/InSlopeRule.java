@@ -34,8 +34,9 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * Indicator-in-slope rule.
  *
- * Satisfied when the difference of the value of the {@link Indicator indicator} and the previous (n-th) value of the
- * {@link Indicator indicator} is between the values of maxSlope or/and minSlope. It can test both, positive and
+ * Satisfied when the difference of the value of the {@link Indicator indicator}
+ * and the previous (n-th) value of the {@link Indicator indicator} is between
+ * the values of maxSlope or/and minSlope. It can test both, positive and
  * negative slope.
  */
 public class InSlopeRule extends AbstractRule {
@@ -52,10 +53,8 @@ public class InSlopeRule extends AbstractRule {
     /**
      * Constructor.
      * 
-     * @param ref
-     *            the reference indicator
-     * @param minSlope
-     *            minumum slope between reference and previous indicator
+     * @param ref      the reference indicator
+     * @param minSlope minumum slope between reference and previous indicator
      */
     public InSlopeRule(Indicator<Num> ref, Num minSlope) {
         this(ref, 1, minSlope, NaN);
@@ -64,12 +63,11 @@ public class InSlopeRule extends AbstractRule {
     /**
      * Constructor.
      * 
-     * @param ref
-     *            the reference indicator
-     * @param minSlope
-     *            minumum slope between value of reference and previous indicator
-     * @param maxSlope
-     *            maximum slope between value of reference and previous indicator
+     * @param ref      the reference indicator
+     * @param minSlope minumum slope between value of reference and previous
+     *                 indicator
+     * @param maxSlope maximum slope between value of reference and previous
+     *                 indicator
      */
     public InSlopeRule(Indicator<Num> ref, Num minSlope, Num maxSlope) {
         this(ref, 1, minSlope, maxSlope);
@@ -78,12 +76,10 @@ public class InSlopeRule extends AbstractRule {
     /**
      * Constructor.
      * 
-     * @param ref
-     *            the reference indicator
-     * @param nthPrevious
-     *            defines the previous n-th indicator
-     * @param maxSlope
-     *            maximum slope between value of reference and previous indicator
+     * @param ref         the reference indicator
+     * @param nthPrevious defines the previous n-th indicator
+     * @param maxSlope    maximum slope between value of reference and previous
+     *                    indicator
      */
     public InSlopeRule(Indicator<Num> ref, int nthPrevious, Num maxSlope) {
         this(ref, nthPrevious, NaN, maxSlope);
@@ -92,14 +88,12 @@ public class InSlopeRule extends AbstractRule {
     /**
      * Constructor.
      * 
-     * @param ref
-     *            the reference indicator
-     * @param nthPrevious
-     *            defines the previous n-th indicator
-     * @param minSlope
-     *            minumum slope between value of reference and previous indicator
-     * @param maxSlope
-     *            maximum slope between value of reference and previous indicator
+     * @param ref         the reference indicator
+     * @param nthPrevious defines the previous n-th indicator
+     * @param minSlope    minumum slope between value of reference and previous
+     *                    indicator
+     * @param maxSlope    maximum slope between value of reference and previous
+     *                    indicator
      */
     public InSlopeRule(Indicator<Num> ref, int nthPrevious, Num minSlope, Num maxSlope) {
         this.ref = ref;

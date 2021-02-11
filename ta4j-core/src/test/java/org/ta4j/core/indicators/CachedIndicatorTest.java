@@ -105,8 +105,10 @@ public class CachedIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, N
 
         Strategy strategy = new BaseStrategy(new OverIndicatorRule(sma, sma.numOf(3)),
                 new UnderIndicatorRule(sma, sma.numOf(3)));
-        // Theoretical shouldEnter results: false, false, false, false, true, true, true, true
-        // Theoretical shouldExit results: false, false, true, true, false, false, false, false
+        // Theoretical shouldEnter results: false, false, false, false, true, true,
+        // true, true
+        // Theoretical shouldExit results: false, false, true, true, false, false,
+        // false, false
 
         // As we return the first bar/result found for the removed bars:
         // -> Approximated values for ClosePrice cache: 2, 2, 2, 3, 4, 5, 6, 7

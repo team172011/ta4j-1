@@ -87,7 +87,8 @@ public class CsvTradesLoader {
                 Instant endInstant = endTime.toInstant();
                 beginTime = ZonedDateTime.ofInstant(endInstant, ZoneId.systemDefault());
                 endTime = ZonedDateTime.ofInstant(beginInstant, ZoneId.systemDefault());
-                // Since the CSV file has the most recent trades at the top of the file, we'll reverse the list to feed
+                // Since the CSV file has the most recent trades at the top of the file, we'll
+                // reverse the list to feed
                 // the List<Bar> correctly.
                 Collections.reverse(lines);
             }
@@ -101,14 +102,10 @@ public class CsvTradesLoader {
     /**
      * Builds a list of populated bars from csv data.
      * 
-     * @param beginTime
-     *            the begin time of the whole period
-     * @param endTime
-     *            the end time of the whole period
-     * @param duration
-     *            the bar duration (in seconds)
-     * @param lines
-     *            the csv data returned by CSVReader.readAll()
+     * @param beginTime the begin time of the whole period
+     * @param endTime   the end time of the whole period
+     * @param duration  the bar duration (in seconds)
+     * @param lines     the csv data returned by CSVReader.readAll()
      * @return the list of populated bars
      */
     @SuppressWarnings("deprecation")

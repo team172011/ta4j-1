@@ -108,8 +108,7 @@ public class SimpleLinearRegressionIndicatorTest extends AbstractIndicatorTest<I
     }
 
     /**
-     * @param values
-     *            values
+     * @param values values
      * @return a simple linear regression based on provided values
      */
     private static SimpleRegression buildSimpleRegression(double... values) {

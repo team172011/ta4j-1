@@ -39,12 +39,9 @@ public class RAVIIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      * 
-     * @param price
-     *            the price
-     * @param shortSmaBarCount
-     *            the time frame for the short SMA (usually 7)
-     * @param longSmaBarCount
-     *            the time frame for the long SMA (usually 65)
+     * @param price            the price
+     * @param shortSmaBarCount the time frame for the short SMA (usually 7)
+     * @param longSmaBarCount  the time frame for the long SMA (usually 65)
      */
     public RAVIIndicator(Indicator<Num> price, int shortSmaBarCount, int longSmaBarCount) {
         super(price);

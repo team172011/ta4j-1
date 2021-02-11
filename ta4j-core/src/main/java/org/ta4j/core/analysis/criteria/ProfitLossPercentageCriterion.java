@@ -45,10 +45,8 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the profit or loss on a trade in percentage.
      *
-     * @param series
-     *            a time series
-     * @param trade
-     *            a trade
+     * @param series a time series
+     * @param trade  a trade
      * @return the profit or loss on a trade
      */
     @Override

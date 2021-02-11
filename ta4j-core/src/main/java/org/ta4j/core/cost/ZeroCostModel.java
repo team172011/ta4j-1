@@ -50,8 +50,7 @@ public class ZeroCostModel implements CostModel {
     /**
      * Evaluate if two models are equal
      * 
-     * @param otherModel
-     *            model to compare with
+     * @param otherModel model to compare with
      */
     public boolean equals(CostModel otherModel) {
         boolean equality = false;

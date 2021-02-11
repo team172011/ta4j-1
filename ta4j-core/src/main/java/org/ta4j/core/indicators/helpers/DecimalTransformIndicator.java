@@ -30,8 +30,9 @@ import org.ta4j.core.num.Num;
 /**
  * Simple decimal transform indicator.
  *
- * @apiNote Minimal deviations in last decimal places possible. During the calculations this indicator converts
- *          {@link Num PrecisionNum} to to {@link Double double} Transforms any indicator by using common math
+ * @apiNote Minimal deviations in last decimal places possible. During the
+ *          calculations this indicator converts {@link Num PrecisionNum} to to
+ *          {@link Double double} Transforms any indicator by using common math
  *          operations.
  */
 public class DecimalTransformIndicator extends CachedIndicator<Num> {
@@ -102,12 +103,9 @@ public class DecimalTransformIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      * 
-     * @param indicator
-     *            the indicator
-     * @param coefficient
-     *            the value for transformation
-     * @param type
-     *            the type of the transformation
+     * @param indicator   the indicator
+     * @param coefficient the value for transformation
+     * @param type        the type of the transformation
      */
     public DecimalTransformIndicator(Indicator<Num> indicator, double coefficient, DecimalTransformType type) {
         super(indicator);
@@ -119,10 +117,8 @@ public class DecimalTransformIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      * 
-     * @param indicator
-     *            the indicator
-     * @param type
-     *            the type of the transformation
+     * @param indicator the indicator
+     * @param type      the type of the transformation
      */
     public DecimalTransformIndicator(Indicator<Num> indicator, DecimalTransformSimpleType type) {
         super(indicator);

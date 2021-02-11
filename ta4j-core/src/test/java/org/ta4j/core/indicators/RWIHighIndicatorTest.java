@@ -38,7 +38,8 @@ import org.ta4j.core.num.Num;
 public class RWIHighIndicatorTest extends AbstractIndicatorTest<TimeSeries, Num> {
 
     /**
-     * TODO: Just graphically Excel-Sheet validation with hard coded results. Excel formula needed
+     * TODO: Just graphically Excel-Sheet validation with hard coded results. Excel
+     * formula needed
      */
     private ExternalIndicatorTest xls;
 

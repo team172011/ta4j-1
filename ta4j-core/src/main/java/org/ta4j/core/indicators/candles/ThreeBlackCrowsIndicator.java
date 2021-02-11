@@ -49,12 +49,10 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor.
      * 
-     * @param series
-     *            a time series
-     * @param barCount
-     *            the number of bars used to calculate the average lower shadow
-     * @param factor
-     *            the factor used when checking if a candle has a very short lower shadow
+     * @param series   a time series
+     * @param barCount the number of bars used to calculate the average lower shadow
+     * @param factor   the factor used when checking if a candle has a very short
+     *                 lower shadow
      */
     public ThreeBlackCrowsIndicator(TimeSeries series, int barCount, double factor) {
         super(series);
@@ -75,8 +73,7 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the bar/candle index
+     * @param index the bar/candle index
      * @return true if the bar/candle has a very short lower shadow, false otherwise
      */
     private boolean hasVeryShortLowerShadow(int index) {
@@ -88,8 +85,7 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the current bar/candle index
+     * @param index the current bar/candle index
      * @return true if the current bar/candle is declining, false otherwise
      */
     private boolean isDeclining(int index) {
@@ -107,8 +103,7 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the current bar/candle index
+     * @param index the current bar/candle index
      * @return true if the current bar/candle is a black crow, false otherwise
      */
     private boolean isBlackCrow(int index) {

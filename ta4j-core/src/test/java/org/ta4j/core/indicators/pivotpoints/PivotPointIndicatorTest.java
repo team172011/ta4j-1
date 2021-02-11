@@ -1304,7 +1304,8 @@ public class PivotPointIndicatorTest {
 
         // pp
         assertEquals(pp.getValue(0), NaN);// first bar no data for calculation
-        // result of calculation for 7-27 bar is not adequate because the previous day is incomplete..
+        // result of calculation for 7-27 bar is not adequate because the previous day
+        // is incomplete..
         assertNumEquals(Double.valueOf("170.426666"), pp.getValue(170));
         assertNumEquals(Double.valueOf("169.1266666"), pp.getValue(series5Minutes.getEndIndex() - 80)); // prev last bar
         assertNumEquals(Double.valueOf("170.383333"), pp.getValue(series5Minutes.getEndIndex())); // last bar
@@ -1363,7 +1364,8 @@ public class PivotPointIndicatorTest {
         assertEquals(pp.getValue(0), NaN);// first bar no data for
         assertEquals(pp.getValue(1), NaN);// first bar no data for calculation
         assertEquals(pp.getValue(6), NaN);// first bar no data for calculation
-        // result of calculation for second bar is not adequate because the previous day is incomplete
+        // result of calculation for second bar is not adequate because the previous day
+        // is incomplete
         assertNumEquals(Double.valueOf("172.08166"), pp.getValue(28));
         assertNumEquals(Double.valueOf("170.93666"), pp.getValue(series1Hours.getEndIndex() - 36)); // prev last bar
         assertNumEquals(Double.valueOf("168.0100"), pp.getValue(series1Hours.getEndIndex())); // last bar

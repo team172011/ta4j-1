@@ -42,10 +42,8 @@ public class CrossIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor.
      * 
-     * @param up
-     *            the upper indicator
-     * @param low
-     *            the lower indicator
+     * @param up  the upper indicator
+     * @param low the lower indicator
      */
     public CrossIndicator(Indicator<Num> up, Indicator<Num> low) {
         // TODO: check if up series is equal to low series

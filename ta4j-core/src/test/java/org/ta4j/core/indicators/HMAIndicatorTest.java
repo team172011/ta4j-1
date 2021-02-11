@@ -51,7 +51,8 @@ public class HMAIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, Num>
 
     @Test
     public void hmaUsingBarCount9UsingClosePrice() {
-        // Example from http://traders.com/Documentation/FEEDbk_docs/2010/12/TradingIndexesWithHullMA.xls
+        // Example from
+        // http://traders.com/Documentation/FEEDbk_docs/2010/12/TradingIndexesWithHullMA.xls
         HMAIndicator hma = new HMAIndicator(new ClosePriceIndicator(data), 9);
         assertNumEquals(86.3204, hma.getValue(10));
         assertNumEquals(85.3705, hma.getValue(11));

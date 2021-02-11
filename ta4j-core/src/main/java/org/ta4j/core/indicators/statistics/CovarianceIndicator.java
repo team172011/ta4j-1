@@ -42,12 +42,9 @@ public class CovarianceIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator1
-     *            the first indicator
-     * @param indicator2
-     *            the second indicator
-     * @param barCount
-     *            the time frame
+     * @param indicator1 the first indicator
+     * @param indicator2 the second indicator
+     * @param barCount   the time frame
      */
     public CovarianceIndicator(Indicator<Num> indicator1, Indicator<Num> indicator2, int barCount) {
         super(indicator1);

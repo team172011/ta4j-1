@@ -48,9 +48,9 @@ public class SeriesBuilderTest extends AbstractIndicatorTest<TimeSeries, Num> {
     public void testBuilder() {
 
         TimeSeries defaultSeries = seriesBuilder.build(); // build a new empty unnamed time series using BigDecimal as
-                                                          // delegate
+        // delegate
         TimeSeries defaultSeriesName = seriesBuilder.withName("default").build(); // build a new empty unnamed time
-                                                                                  // series using BigDecimal as delegate
+        // series using BigDecimal as delegate
         TimeSeries doubleSeries = seriesBuilder.withMaxBarCount(100).withNumTypeOf(DoubleNum.class)
                 .withName("useDouble").build();
         TimeSeries precisionSeries = seriesBuilder.withMaxBarCount(100).withNumTypeOf(PrecisionNum.class)

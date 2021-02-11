@@ -34,7 +34,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * Fibonacci Reversal Indicator.
  *
- * @see <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
+ * @see <a href=
+ *      "http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points">
  *      http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:pivot_points</a>
  */
 public class FibonacciReversalIndicator extends RecursiveCachedIndicator<Num> {
@@ -70,12 +71,10 @@ public class FibonacciReversalIndicator extends RecursiveCachedIndicator<Num> {
      *
      * Calculates a (fibonacci) reversal
      *
-     * @param pivotPointIndicator
-     *            the {@link PivotPointIndicator} for this reversal
-     * @param fibonacciFactor
-     *            the fibonacci factor for this reversal
-     * @param fibReversalTyp
-     *            the FibonacciReversalIndicator.FibReversalTyp of the reversal (SUPPORT, RESISTANCE)
+     * @param pivotPointIndicator the {@link PivotPointIndicator} for this reversal
+     * @param fibonacciFactor     the fibonacci factor for this reversal
+     * @param fibReversalTyp      the FibonacciReversalIndicator.FibReversalTyp of
+     *                            the reversal (SUPPORT, RESISTANCE)
      */
     public FibonacciReversalIndicator(PivotPointIndicator pivotPointIndicator, double fibonacciFactor,
             FibReversalTyp fibReversalTyp) {
@@ -90,12 +89,11 @@ public class FibonacciReversalIndicator extends RecursiveCachedIndicator<Num> {
      *
      * Calculates a (fibonacci) reversal
      *
-     * @param pivotPointIndicator
-     *            the {@link PivotPointIndicator} for this reversal
-     * @param fibonacciFactor
-     *            the {@link FibonacciFactor} factor for this reversal
-     * @param fibReversalTyp
-     *            the FibonacciReversalIndicator.FibReversalTyp of the reversal (SUPPORT, RESISTANCE)
+     * @param pivotPointIndicator the {@link PivotPointIndicator} for this reversal
+     * @param fibonacciFactor     the {@link FibonacciFactor} factor for this
+     *                            reversal
+     * @param fibReversalTyp      the FibonacciReversalIndicator.FibReversalTyp of
+     *                            the reversal (SUPPORT, RESISTANCE)
      */
     public FibonacciReversalIndicator(PivotPointIndicator pivotPointIndicator, FibonacciFactor fibonacciFactor,
             FibReversalTyp fibReversalTyp) {

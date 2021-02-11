@@ -44,10 +44,8 @@ public class ProfitLossCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the profit or loss on the trade.
      *
-     * @param series
-     *            a time series
-     * @param trade
-     *            a trade
+     * @param series a time series
+     * @param trade  a trade
      * @return the profit or loss on the trade
      */
     @Override

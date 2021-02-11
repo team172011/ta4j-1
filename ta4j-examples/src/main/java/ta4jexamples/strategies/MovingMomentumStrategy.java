@@ -43,14 +43,14 @@ import ta4jexamples.loaders.CsvTradesLoader;
 /**
  * Moving momentum strategy.
  *
- * @see <a href="http://stockcharts.com/help/doku.php?id=chart_school:trading_strategies:moving_momentum">
+ * @see <a href=
+ *      "http://stockcharts.com/help/doku.php?id=chart_school:trading_strategies:moving_momentum">
  *      http://stockcharts.com/help/doku.php?id=chart_school:trading_strategies:moving_momentum</a>
  */
 public class MovingMomentumStrategy {
 
     /**
-     * @param series
-     *            a time series
+     * @param series a time series
      * @return a moving momentum strategy
      */
     public static Strategy buildStrategy(TimeSeries series) {
@@ -60,8 +60,10 @@ public class MovingMomentumStrategy {
 
         ClosePriceIndicator closePrice = new ClosePriceIndicator(series);
 
-        // The bias is bullish when the shorter-moving average moves above the longer moving average.
-        // The bias is bearish when the shorter-moving average moves below the longer moving average.
+        // The bias is bullish when the shorter-moving average moves above the longer
+        // moving average.
+        // The bias is bearish when the shorter-moving average moves below the longer
+        // moving average.
         EMAIndicator shortEma = new EMAIndicator(closePrice, 9);
         EMAIndicator longEma = new EMAIndicator(closePrice, 26);
 

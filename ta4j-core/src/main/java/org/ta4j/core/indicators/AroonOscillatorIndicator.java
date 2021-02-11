@@ -29,7 +29,8 @@ import org.ta4j.core.num.Num;
 /**
  * Aroon Oscillator.
  *
- * @see <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon_oscillator">
+ * @see <a href=
+ *      "http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon_oscillator">
  *      http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon_oscillator</a>
  */
 public class AroonOscillatorIndicator extends CachedIndicator<Num> {

@@ -35,7 +35,8 @@ import java.util.List;
 /**
  * Expected Shortfall criterion.
  *
- * @see <a href="https://en.wikipedia.org/wiki/Expected_shortfall">https://en.wikipedia.org/wiki/Expected_shortfall</a>
+ * @see <a href=
+ *      "https://en.wikipedia.org/wiki/Expected_shortfall">https://en.wikipedia.org/wiki/Expected_shortfall</a>
  *
  *      Measures the expected shortfall of the strategy log-return time-series
  */
@@ -48,8 +49,7 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {
     /**
      * Constructor
      *
-     * @param confidence
-     *            the confidence level
+     * @param confidence the confidence level
      */
     public ExpectedShortfallCriterion(Double confidence) {
         this.confidence = confidence;
@@ -73,10 +73,8 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the Expected Shortfall on the return series
      * 
-     * @param returns
-     *            the corresponding returns
-     * @param confidence
-     *            the confidence level
+     * @param returns    the corresponding returns
+     * @param confidence the confidence level
      * @return the relative Expected Shortfall
      */
     private static Num calculateES(Returns returns, double confidence) {

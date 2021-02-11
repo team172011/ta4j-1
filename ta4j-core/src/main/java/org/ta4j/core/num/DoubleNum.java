@@ -30,7 +30,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * Representation of Double. High performance, lower precision.
  *
- * @apiNote the delegate should never become a NaN value. No self NaN checks provided
+ * @apiNote the delegate should never become a NaN value. No self NaN checks
+ *          provided
  */
 public class DoubleNum implements Num {
 
@@ -178,8 +179,7 @@ public class DoubleNum implements Num {
     /**
      * Checks if this value is greater than another.
      *
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return true is this is greater than the specified value, false otherwise
      */
     public boolean isGreaterThan(Num other) {
@@ -189,9 +189,9 @@ public class DoubleNum implements Num {
     /**
      * Checks if this value is greater than or equal to another.
      *
-     * @param other
-     *            the other value, not null
-     * @return true is this is greater than or equal to the specified value, false otherwise
+     * @param other the other value, not null
+     * @return true is this is greater than or equal to the specified value, false
+     *         otherwise
      */
     public boolean isGreaterThanOrEqual(Num other) {
         return !other.isNaN() && compareTo(other) > -1;
@@ -200,8 +200,7 @@ public class DoubleNum implements Num {
     /**
      * Checks if this value is less than another.
      *
-     * @param other
-     *            the other value, not null
+     * @param other the other value, not null
      * @return true is this is less than the specified value, false otherwise
      */
     public boolean isLessThan(Num other) {

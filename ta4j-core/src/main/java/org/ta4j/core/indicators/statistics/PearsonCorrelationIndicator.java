@@ -32,7 +32,8 @@ import static org.ta4j.core.num.NaN.NaN;
 /**
  * Indicator-Pearson-Correlation
  *
- * @see <a href="http://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/">
+ * @see <a href=
+ *      "http://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/">
  *      http://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/</a>
  */
 public class PearsonCorrelationIndicator extends RecursiveCachedIndicator<Num> {
@@ -46,12 +47,9 @@ public class PearsonCorrelationIndicator extends RecursiveCachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param indicator1
-     *            the first indicator
-     * @param indicator2
-     *            the second indicator
-     * @param barCount
-     *            the time frame
+     * @param indicator1 the first indicator
+     * @param indicator2 the second indicator
+     * @param barCount   the time frame
      */
     public PearsonCorrelationIndicator(Indicator<Num> indicator1, Indicator<Num> indicator2, int barCount) {
         super(indicator1);
@@ -88,7 +86,8 @@ public class PearsonCorrelationIndicator extends RecursiveCachedIndicator<Num> {
                 .multipliedBy(n.multipliedBy(Syy).minus(Sy.multipliedBy(Sy)));
 
         if (toSqrt.isGreaterThan(numOf(0))) {
-            // pearson = (n * Sxy - Sx * Sy) / sqrt((n * Sxx - Sx * Sx) * (n * Syy - Sy * Sy))
+            // pearson = (n * Sxy - Sx * Sy) / sqrt((n * Sxx - Sx * Sx) * (n * Syy - Sy *
+            // Sy))
             return (n.multipliedBy(Sxy).minus(Sx.multipliedBy(Sy))).dividedBy(toSqrt.sqrt());
         }
 

@@ -63,10 +63,8 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param timePeriod
-     *            the time period
-     * @param endTime
-     *            the end time of the bar period
+     * @param timePeriod the time period
+     * @param endTime    the end time of the bar period
      */
     public BaseBar(Duration timePeriod, ZonedDateTime endTime, Function<Number, Num> numFunction) {
         checkTimeArguments(timePeriod, endTime);
@@ -80,18 +78,12 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param endTime
-     *            the end time of the bar period
-     * @param openPrice
-     *            the open price of the bar period
-     * @param highPrice
-     *            the highest price of the bar period
-     * @param lowPrice
-     *            the lowest price of the bar period
-     * @param closePrice
-     *            the close price of the bar period
-     * @param volume
-     *            the volume of the bar period
+     * @param endTime    the end time of the bar period
+     * @param openPrice  the open price of the bar period
+     * @param highPrice  the highest price of the bar period
+     * @param lowPrice   the lowest price of the bar period
+     * @param closePrice the close price of the bar period
+     * @param volume     the volume of the bar period
      */
     public BaseBar(ZonedDateTime endTime, double openPrice, double highPrice, double lowPrice, double closePrice,
             double volume, Function<Number, Num> numFunction) {
@@ -102,18 +94,12 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param endTime
-     *            the end time of the bar period
-     * @param openPrice
-     *            the open price of the bar period
-     * @param highPrice
-     *            the highest price of the bar period
-     * @param lowPrice
-     *            the lowest price of the bar period
-     * @param closePrice
-     *            the close price of the bar period
-     * @param volume
-     *            the volume of the bar period
+     * @param endTime    the end time of the bar period
+     * @param openPrice  the open price of the bar period
+     * @param highPrice  the highest price of the bar period
+     * @param lowPrice   the lowest price of the bar period
+     * @param closePrice the close price of the bar period
+     * @param volume     the volume of the bar period
      */
     public BaseBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice,
             String volume, Function<Number, Num> numFunction) {
@@ -125,20 +111,13 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param endTime
-     *            the end time of the bar
-     * @param openPrice
-     *            the open price of the bar
-     * @param highPrice
-     *            the highest price of the bar
-     * @param lowPrice
-     *            the lowest price of the bar
-     * @param closePrice
-     *            the close price of the bar
-     * @param volume
-     *            the volume of the bar
-     * @param value
-     *            the value of the bar
+     * @param endTime    the end time of the bar
+     * @param openPrice  the open price of the bar
+     * @param highPrice  the highest price of the bar
+     * @param lowPrice   the lowest price of the bar
+     * @param closePrice the close price of the bar
+     * @param volume     the volume of the bar
+     * @param value      the value of the bar
      */
     public BaseBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice,
             String volume, String value, Function<Number, Num> numFunction) {
@@ -150,18 +129,12 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param endTime
-     *            the end time of the bar period
-     * @param openPrice
-     *            the open price of the bar period
-     * @param highPrice
-     *            the highest price of the bar period
-     * @param lowPrice
-     *            the lowest price of the bar period
-     * @param closePrice
-     *            the close price of the bar period
-     * @param volume
-     *            the volume of the bar period
+     * @param endTime    the end time of the bar period
+     * @param openPrice  the open price of the bar period
+     * @param highPrice  the highest price of the bar period
+     * @param lowPrice   the lowest price of the bar period
+     * @param closePrice the close price of the bar period
+     * @param volume     the volume of the bar period
      */
     public BaseBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume,
             Num amount) {
@@ -171,22 +144,14 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param timePeriod
-     *            the time period
-     * @param endTime
-     *            the end time of the bar period
-     * @param openPrice
-     *            the open price of the bar period
-     * @param highPrice
-     *            the highest price of the bar period
-     * @param lowPrice
-     *            the lowest price of the bar period
-     * @param closePrice
-     *            the close price of the bar period
-     * @param volume
-     *            the volume of the bar period
-     * @param amount
-     *            the amount of the bar period
+     * @param timePeriod the time period
+     * @param endTime    the end time of the bar period
+     * @param openPrice  the open price of the bar period
+     * @param highPrice  the highest price of the bar period
+     * @param lowPrice   the lowest price of the bar period
+     * @param closePrice the close price of the bar period
+     * @param volume     the volume of the bar period
+     * @param amount     the amount of the bar period
      */
     public BaseBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice,
             Num closePrice, Num volume, Num amount) {
@@ -205,24 +170,15 @@ public class BaseBar implements Bar {
     /**
      * Constructor.
      * 
-     * @param timePeriod
-     *            the time period
-     * @param endTime
-     *            the end time of the bar period
-     * @param openPrice
-     *            the open price of the bar period
-     * @param highPrice
-     *            the highest price of the bar period
-     * @param lowPrice
-     *            the lowest price of the bar period
-     * @param closePrice
-     *            the close price of the bar period
-     * @param volume
-     *            the volume of the bar period
-     * @param amount
-     *            the amount of the bar period
-     * @param trades
-     *            the trades count of the bar period
+     * @param timePeriod the time period
+     * @param endTime    the end time of the bar period
+     * @param openPrice  the open price of the bar period
+     * @param highPrice  the highest price of the bar period
+     * @param lowPrice   the lowest price of the bar period
+     * @param closePrice the close price of the bar period
+     * @param volume     the volume of the bar period
+     * @param amount     the amount of the bar period
+     * @param trades     the trades count of the bar period
      */
     public BaseBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice,
             Num closePrice, Num volume, Num amount, int trades) {
@@ -330,10 +286,8 @@ public class BaseBar implements Bar {
     /**
      * Adds a trade at the end of bar period.
      * 
-     * @param tradeVolume
-     *            the traded volume
-     * @param tradePrice
-     *            the price
+     * @param tradeVolume the traded volume
+     * @param tradePrice  the price
      */
     public void addTrade(Num tradeVolume, Num tradePrice) {
         addPrice(tradePrice);
@@ -366,12 +320,9 @@ public class BaseBar implements Bar {
     }
 
     /**
-     * @param timePeriod
-     *            the time period
-     * @param endTime
-     *            the end time of the bar
-     * @throws IllegalArgumentException
-     *             if one of the arguments is null
+     * @param timePeriod the time period
+     * @param endTime    the end time of the bar
+     * @throws IllegalArgumentException if one of the arguments is null
      */
     private static void checkTimeArguments(Duration timePeriod, ZonedDateTime endTime) {
         if (timePeriod == null) {

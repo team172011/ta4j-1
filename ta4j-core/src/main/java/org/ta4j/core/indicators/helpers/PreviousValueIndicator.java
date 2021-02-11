@@ -38,8 +38,8 @@ public class PreviousValueIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      * 
-     * @param indicator
-     *            the indicator of which the previous value should be calculated
+     * @param indicator the indicator of which the previous value should be
+     *                  calculated
      */
     public PreviousValueIndicator(Indicator<Num> indicator) {
         this(indicator, 1);
@@ -48,10 +48,9 @@ public class PreviousValueIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      * 
-     * @param indicator
-     *            the indicator of which the previous value should be calculated
-     * @param n
-     *            parameter defines the previous n-th value
+     * @param indicator the indicator of which the previous value should be
+     *                  calculated
+     * @param n         parameter defines the previous n-th value
      */
     public PreviousValueIndicator(Indicator<Num> indicator, int n) {
         super(indicator);

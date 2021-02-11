@@ -101,12 +101,10 @@ public class BaseTradingRecord implements TradingRecord {
     /**
      * Constructor.
      *
-     * @param entryOrderType
-     *            the {@link Order.OrderType order type} of entries in the trading session
-     * @param transactionCostModel
-     *            the cost model for transactions of the asset
-     * @param holdingCostModel
-     *            the cost model for holding asset (e.g. borrowing)
+     * @param entryOrderType       the {@link Order.OrderType order type} of entries
+     *                             in the trading session
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
      */
     public BaseTradingRecord(Order.OrderType entryOrderType, CostModel transactionCostModel,
             CostModel holdingCostModel) {
@@ -122,8 +120,7 @@ public class BaseTradingRecord implements TradingRecord {
     /**
      * Constructor.
      *
-     * @param orders
-     *            the orders to be recorded (cannot be empty)
+     * @param orders the orders to be recorded (cannot be empty)
      */
     public BaseTradingRecord(Order... orders) {
         this(new ZeroCostModel(), new ZeroCostModel(), orders);
@@ -132,12 +129,9 @@ public class BaseTradingRecord implements TradingRecord {
     /**
      * Constructor.
      *
-     * @param transactionCostModel
-     *            the cost model for transactions of the asset
-     * @param holdingCostModel
-     *            the cost model for holding asset (e.g. borrowing)
-     * @param orders
-     *            the orders to be recorded (cannot be empty)
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
+     * @param orders               the orders to be recorded (cannot be empty)
      */
     public BaseTradingRecord(CostModel transactionCostModel, CostModel holdingCostModel, Order... orders) {
         this(orders[0].getType(), transactionCostModel, holdingCostModel);
@@ -232,10 +226,8 @@ public class BaseTradingRecord implements TradingRecord {
     /**
      * Records an order and the corresponding trade (if closed).
      *
-     * @param order
-     *            the order to be recorded
-     * @param isEntry
-     *            true if the order is an entry, false otherwise (exit)
+     * @param order   the order to be recorded
+     * @param isEntry true if the order is an entry, false otherwise (exit)
      */
     private void recordOrder(Order order, boolean isEntry) {
         if (order == null) {

@@ -30,7 +30,8 @@ import org.ta4j.core.num.Num;
 /**
  * Indicator-rising-indicator rule.
  *
- * Satisfied when the values of the {@link Indicator indicator} increase within the barCount.
+ * Satisfied when the values of the {@link Indicator indicator} increase within
+ * the barCount.
  */
 public class IsRisingRule extends AbstractRule {
 
@@ -44,10 +45,8 @@ public class IsRisingRule extends AbstractRule {
     /**
      * Constructor for strict rising.
      * 
-     * @param ref
-     *            the indicator
-     * @param barCount
-     *            the time frame
+     * @param ref      the indicator
+     * @param barCount the time frame
      */
     public IsRisingRule(Indicator<Num> ref, int barCount) {
         this(ref, barCount, 1);
@@ -56,12 +55,10 @@ public class IsRisingRule extends AbstractRule {
     /**
      * Constructor.
      * 
-     * @param ref
-     *            the indicator
-     * @param barCount
-     *            the time frame
-     * @param minStrenght
-     *            the minimum required rising strenght (between '0' and '1', e.g. '1' for strict rising)
+     * @param ref         the indicator
+     * @param barCount    the time frame
+     * @param minStrenght the minimum required rising strenght (between '0' and '1',
+     *                    e.g. '1' for strict rising)
      */
     public IsRisingRule(Indicator<Num> ref, int barCount, double minStrenght) {
         this.ref = ref;

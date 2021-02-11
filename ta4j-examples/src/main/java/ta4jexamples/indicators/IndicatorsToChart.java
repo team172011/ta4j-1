@@ -55,12 +55,9 @@ public class IndicatorsToChart {
     /**
      * Builds a JFreeChart time series from a Ta4j time series and an indicator.
      * 
-     * @param barseries
-     *            the ta4j time series
-     * @param indicator
-     *            the indicator
-     * @param name
-     *            the name of the chart time series
+     * @param barseries the ta4j time series
+     * @param indicator the indicator
+     * @param name      the name of the chart time series
      * @return the JFreeChart time series
      */
     private static org.jfree.data.time.TimeSeries buildChartTimeSeries(TimeSeries barseries, Indicator<Num> indicator,
@@ -76,8 +73,7 @@ public class IndicatorsToChart {
     /**
      * Displays a chart in a frame.
      * 
-     * @param chart
-     *            the chart to be displayed
+     * @param chart the chart to be displayed
      */
     private static void displayChart(JFreeChart chart) {
         // Chart panel

@@ -95,7 +95,8 @@ public class BaseTimeSeriesAggregatorTest extends AbstractIndicatorTest<TimeSeri
     }
 
     /**
-     * This bar aggregator created only for test purposes is returning first and last bar.
+     * This bar aggregator created only for test purposes is returning first and
+     * last bar.
      */
     private static class BarAggregatorForTest implements BarAggregator {
         @Override

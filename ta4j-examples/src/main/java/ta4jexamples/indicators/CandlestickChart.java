@@ -53,8 +53,7 @@ public class CandlestickChart {
     /**
      * Builds a JFreeChart OHLC dataset from a ta4j time series.
      * 
-     * @param series
-     *            a time series
+     * @param series a time series
      * @return an Open-High-Low-Close dataset
      */
     private static OHLCDataset createOHLCDataset(TimeSeries series) {
@@ -83,8 +82,7 @@ public class CandlestickChart {
     /**
      * Builds an additional JFreeChart dataset from a ta4j time series.
      * 
-     * @param series
-     *            a time series
+     * @param series a time series
      * @return an additional dataset
      */
     private static TimeSeriesCollection createAdditionalDataset(TimeSeries series) {
@@ -103,8 +101,7 @@ public class CandlestickChart {
     /**
      * Displays a chart in a frame.
      * 
-     * @param chart
-     *            the chart to be displayed
+     * @param chart the chart to be displayed
      */
     private static void displayChart(JFreeChart chart) {
         // Chart panel

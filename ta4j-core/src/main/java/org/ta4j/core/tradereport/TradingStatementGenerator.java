@@ -28,7 +28,8 @@ import org.ta4j.core.TimeSeries;
 import org.ta4j.core.TradingRecord;
 
 /**
- * This class generates TradingStatement basis on provided trading report and time series
+ * This class generates TradingStatement basis on provided trading report and
+ * time series
  *
  * @see TradingStatement
  */

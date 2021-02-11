@@ -44,10 +44,10 @@ public class DurationBarAggregator implements BarAggregator {
     private final boolean onlyFinalBars;
 
     /**
-     * Duration basing bar aggregator. Only bars with elapsed time (final bars) will be created.
+     * Duration basing bar aggregator. Only bars with elapsed time (final bars) will
+     * be created.
      *
-     * @param timePeriod
-     *            time period to aggregate
+     * @param timePeriod time period to aggregate
      */
     public DurationBarAggregator(Duration timePeriod) {
         this(timePeriod, true);
@@ -56,10 +56,9 @@ public class DurationBarAggregator implements BarAggregator {
     /**
      * Duration basing bar aggregator
      *
-     * @param timePeriod
-     *            time period to aggregate
-     * @param onlyFinalBars
-     *            if true only bars with elapsed time (final bars) will be created, otherwise also pending bars
+     * @param timePeriod    time period to aggregate
+     * @param onlyFinalBars if true only bars with elapsed time (final bars) will be
+     *                      created, otherwise also pending bars
      */
     public DurationBarAggregator(Duration timePeriod, boolean onlyFinalBars) {
         this.timePeriod = timePeriod;
@@ -67,11 +66,10 @@ public class DurationBarAggregator implements BarAggregator {
     }
 
     /**
-     * Aggregates a list of bars by <code>timePeriod</code>.The new <code>timePeriod</code> must be a multiplication of
-     * the actual time period.
+     * Aggregates a list of bars by <code>timePeriod</code>.The new
+     * <code>timePeriod</code> must be a multiplication of the actual time period.
      *
-     * @param bars
-     *            the actual bars
+     * @param bars the actual bars
      * @return the aggregated bars with new <code>timePeriod</code>
      */
     @Override

@@ -57,7 +57,8 @@ public class UlcerIndexIndicatorTest extends AbstractIndicatorTest<Indicator<Num
 
         assertNumEquals(0, ulcer.getValue(0));
 
-        // From: http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ulcer_index
+        // From:
+        // http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:ulcer_index
         assertNumEquals(1.3047, ulcer.getValue(26));
         assertNumEquals(1.3022, ulcer.getValue(27));
         assertNumEquals(1.2156, ulcer.getValue(28));

@@ -31,7 +31,8 @@ import org.ta4j.core.num.Num;
 /**
  * Gross profit criterion.
  *
- * The gross profit of the provided {@link Trade trade(s)} over the provided {@link TimeSeries series}.
+ * The gross profit of the provided {@link Trade trade(s)} over the provided
+ * {@link TimeSeries series}.
  */
 public class TotalProfit2Criterion extends AbstractAnalysisCriterion {
 
@@ -44,10 +45,8 @@ public class TotalProfit2Criterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the gross profit value of given trade
      *
-     * @param series
-     *            a time series
-     * @param trade
-     *            a trade to calculate profit
+     * @param series a time series
+     * @param trade  a trade to calculate profit
      * @return the total profit
      */
     @Override

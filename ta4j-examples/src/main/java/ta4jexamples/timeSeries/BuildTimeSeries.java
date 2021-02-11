@@ -40,10 +40,10 @@ import java.util.List;
 public class BuildTimeSeries {
 
     /**
-     * Calls different functions that shows how a BaseTimeSeries could be created and how Bars could be added
+     * Calls different functions that shows how a BaseTimeSeries could be created
+     * and how Bars could be added
      *
-     * @param args
-     *            command line arguments (ignored)
+     * @param args command line arguments (ignored)
      */
     @SuppressWarnings("unused")
     public static void main(String[] args) {
@@ -121,7 +121,8 @@ public class BuildTimeSeries {
     private static TimeSeries buildManuallyAndAddBarManually() {
         TimeSeries series = new BaseTimeSeries("mySeries", DoubleNum::valueOf); // uses DoubleNum
 
-        // create bars and add them to the series. The bars must have the same Num type as the series
+        // create bars and add them to the series. The bars must have the same Num type
+        // as the series
         ZonedDateTime endTime = ZonedDateTime.now();
         Bar b1 = new BaseBar(endTime, 105.42, 112.99, 104.01, 111.42, 1337, DoubleNum::valueOf);
         Bar b2 = new BaseBar(endTime.plusDays(1), 111.43, 112.83, 107.77, 107.99, 1234, DoubleNum::valueOf);
@@ -136,7 +137,8 @@ public class BuildTimeSeries {
     }
 
     private static TimeSeries buildAndAddBarsFromList() {
-        // Store Bars in a list and add them later. The bars must have the same Num type as the series
+        // Store Bars in a list and add them later. The bars must have the same Num type
+        // as the series
         ZonedDateTime endTime = ZonedDateTime.now();
         Bar b1 = barBuilderFromString().timePeriod(Duration.ofDays(1)).endTime(endTime).openPrice("105.42")
                 .highPrice("112.99").lowPrice("104.01").closePrice("111.42").volume("1337").build();

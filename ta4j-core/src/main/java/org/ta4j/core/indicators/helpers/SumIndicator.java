@@ -39,8 +39,7 @@ public class SumIndicator extends CachedIndicator<Num> {
     /**
      * Constructor. (operand0 plus operand1 plus ... plus operandN)
      * 
-     * @param operands
-     *            the operand indicators for the sum
+     * @param operands the operand indicators for the sum
      */
     @SafeVarargs
     public SumIndicator(Indicator<Num>... operands) {

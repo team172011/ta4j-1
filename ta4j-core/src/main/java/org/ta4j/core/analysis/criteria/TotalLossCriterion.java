@@ -39,10 +39,8 @@ public class TotalLossCriterion extends AbstractAnalysisCriterion {
     /**
      * Calculates the gross loss of the given trade
      *
-     * @param series
-     *            a time series
-     * @param trade
-     *            a trade
+     * @param series a time series
+     * @param trade  a trade
      * @return the loss of the trade
      */
     @Override

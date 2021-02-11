@@ -46,19 +46,17 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * This class builds a graphical chart showing the buy/sell signals of a strategy.
+ * This class builds a graphical chart showing the buy/sell signals of a
+ * strategy.
  */
 public class BuyAndSellSignalsToChart {
 
     /**
      * Builds a JFreeChart time series from a Ta4j time series and an indicator.
      * 
-     * @param barseries
-     *            the ta4j time series
-     * @param indicator
-     *            the indicator
-     * @param name
-     *            the name of the chart time series
+     * @param barseries the ta4j time series
+     * @param indicator the indicator
+     * @param name      the name of the chart time series
      * @return the JFreeChart time series
      */
     private static org.jfree.data.time.TimeSeries buildChartTimeSeries(TimeSeries barseries, Indicator<Num> indicator,
@@ -73,14 +71,12 @@ public class BuyAndSellSignalsToChart {
     }
 
     /**
-     * Runs a strategy over a time series and adds the value markers corresponding to buy/sell signals to the plot.
+     * Runs a strategy over a time series and adds the value markers corresponding
+     * to buy/sell signals to the plot.
      * 
-     * @param series
-     *            a time series
-     * @param strategy
-     *            a trading strategy
-     * @param plot
-     *            the plot
+     * @param series   a time series
+     * @param strategy a trading strategy
+     * @param plot     the plot
      */
     private static void addBuySellSignals(TimeSeries series, Strategy strategy, XYPlot plot) {
         // Running the strategy
@@ -110,8 +106,7 @@ public class BuyAndSellSignalsToChart {
     /**
      * Displays a chart in a frame.
      * 
-     * @param chart
-     *            the chart to be displayed
+     * @param chart the chart to be displayed
      */
     private static void displayChart(JFreeChart chart) {
         // Chart panel

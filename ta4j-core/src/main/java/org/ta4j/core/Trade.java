@@ -68,8 +68,8 @@ public class Trade implements Serializable {
     /**
      * Constructor.
      * 
-     * @param startingType
-     *            the starting {@link OrderType order type} of the trade (i.e. type of the entry order)
+     * @param startingType the starting {@link OrderType order type} of the trade
+     *                     (i.e. type of the entry order)
      */
     public Trade(OrderType startingType) {
         this(startingType, new ZeroCostModel(), new ZeroCostModel());
@@ -78,12 +78,10 @@ public class Trade implements Serializable {
     /**
      * Constructor.
      * 
-     * @param startingType
-     *            the starting {@link OrderType order type} of the trade (i.e. type of the entry order)
-     * @param transactionCostModel
-     *            the cost model for transactions of the asset
-     * @param holdingCostModel
-     *            the cost model for holding asset (e.g. borrowing)
+     * @param startingType         the starting {@link OrderType order type} of the
+     *                             trade (i.e. type of the entry order)
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
      */
     public Trade(OrderType startingType, CostModel transactionCostModel, CostModel holdingCostModel) {
         if (startingType == null) {
@@ -97,10 +95,8 @@ public class Trade implements Serializable {
     /**
      * Constructor.
      * 
-     * @param entry
-     *            the entry {@link Order order}
-     * @param exit
-     *            the exit {@link Order order}
+     * @param entry the entry {@link Order order}
+     * @param exit  the exit {@link Order order}
      */
     public Trade(Order entry, Order exit) {
         this(entry, exit, entry.getCostModel(), new ZeroCostModel());
@@ -109,14 +105,10 @@ public class Trade implements Serializable {
     /**
      * Constructor.
      * 
-     * @param entry
-     *            the entry {@link Order order}
-     * @param exit
-     *            the exit {@link Order order}
-     * @param transactionCostModel
-     *            the cost model for transactions of the asset
-     * @param holdingCostModel
-     *            the cost model for holding asset (e.g. borrowing)
+     * @param entry                the entry {@link Order order}
+     * @param exit                 the exit {@link Order order}
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
      */
     public Trade(Order entry, Order exit, CostModel transactionCostModel, CostModel holdingCostModel) {
 
@@ -168,8 +160,7 @@ public class Trade implements Serializable {
     /**
      * Operates the trade at the index-th position
      * 
-     * @param index
-     *            the bar index
+     * @param index the bar index
      * @return the order
      */
     public Order operate(int index) {
@@ -179,12 +170,9 @@ public class Trade implements Serializable {
     /**
      * Operates the trade at the index-th position
      * 
-     * @param index
-     *            the bar index
-     * @param price
-     *            the price
-     * @param amount
-     *            the amount
+     * @param index  the bar index
+     * @param price  the price
+     * @param amount the amount
      * @return the order
      */
     public Order operate(int index, Num price, Num amount) {
@@ -244,12 +232,13 @@ public class Trade implements Serializable {
     }
 
     /**
-     * Calculate the profit of the trade. If it is open, calculates the profit until the final bar.
+     * Calculate the profit of the trade. If it is open, calculates the profit until
+     * the final bar.
      * 
-     * @param finalIndex
-     *            the index of the final bar to be considered (if trade is open)
-     * @param finalPrice
-     *            the price of the final bar to be considered (if trade is open)
+     * @param finalIndex the index of the final bar to be considered (if trade is
+     *                   open)
+     * @param finalPrice the price of the final bar to be considered (if trade is
+     *                   open)
      * @return the profit or loss of the trade
      */
     public Num getProfit(int finalIndex, Num finalPrice) {
@@ -261,8 +250,8 @@ public class Trade implements Serializable {
     /**
      * Calculate the gross (w/o trading costs) profit of the trade.
      * 
-     * @param finalPrice
-     *            the price of the final bar to be considered (if trade is open)
+     * @param finalPrice the price of the final bar to be considered (if trade is
+     *                   open)
      * @return the profit or loss of the trade
      */
     private Num calculateGrossProfit(Num finalPrice) {
@@ -283,8 +272,8 @@ public class Trade implements Serializable {
     /**
      * Calculates the total cost of the trade
      * 
-     * @param finalIndex
-     *            the index of the final bar to be considered (if trade is open)
+     * @param finalIndex the index of the final bar to be considered (if trade is
+     *                   open)
      * @return the cost of the trade
      */
     public Num getTradeCost(int finalIndex) {
@@ -316,8 +305,8 @@ public class Trade implements Serializable {
     /**
      * Calculates the holding cost of the trade
      * 
-     * @param finalIndex
-     *            the index of the final bar to be considered (if trade is open)
+     * @param finalIndex the index of the final bar to be considered (if trade is
+     *                   open)
      * @return the cost of the trade
      */
     public Num getHoldingCost(int finalIndex) {

@@ -49,7 +49,8 @@ public class RSIIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, Num>
     public RSIIndicatorTest(Function<Number, Num> numFunction) {
         super((data, params) -> new RSIIndicator((Indicator<Num>) data, (int) params[0]), numFunction);
         xls = new XLSIndicatorTest(this.getClass(), "RSI.xls", 10, numFunction);
-        // sql = new SQLIndicatorTest(this.getClass(), "RSI.db", username, pass, table, column);
+        // sql = new SQLIndicatorTest(this.getClass(), "RSI.db", username, pass, table,
+        // column);
     }
 
     @Before
@@ -118,7 +119,8 @@ public class RSIIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, Num>
 
     @Test
     public void onlineExampleTest() throws Exception {
-        // from http://cns.bu.edu/~gsc/CN710/fincast/Technical%20_indicators/Relative%20Strength%20Index%20(RSI).htm
+        // from
+        // http://cns.bu.edu/~gsc/CN710/fincast/Technical%20_indicators/Relative%20Strength%20Index%20(RSI).htm
         // which uses a different calculation of RSI than ta4j
         TimeSeries series = new MockTimeSeries(numFunction, 46.1250, 47.1250, 46.4375, 46.9375, 44.9375, 44.2500,
                 44.6250, 45.7500, 47.8125, 47.5625, 47.0000, 44.5625, 46.3125, 47.6875, 46.6875, 45.6875, 43.0625,
@@ -146,8 +148,10 @@ public class RSIIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, Num>
 
         // strange, online average gain and loss is not a simple moving average!
         // but they only use them for the first RS calculation
-        // assertEquals(0.5430, avgGain.getValue(15).doubleValue(), TATestsUtils.GENERAL_OFFSET);
-        // assertEquals(0.5772, avgLoss.getValue(15).doubleValue(), TATestsUtils.GENERAL_OFFSET);
+        // assertEquals(0.5430, avgGain.getValue(15).doubleValue(),
+        // TATestsUtils.GENERAL_OFFSET);
+        // assertEquals(0.5772, avgLoss.getValue(15).doubleValue(),
+        // TATestsUtils.GENERAL_OFFSET);
         // second online calculation uses MMAs
         // MMA of average gain
         double dividend = avgGain.getValue(14).multipliedBy(series.numOf(13)).plus(gain.getValue(15))

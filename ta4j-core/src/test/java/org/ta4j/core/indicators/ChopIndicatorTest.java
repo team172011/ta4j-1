@@ -66,7 +66,8 @@ public class ChopIndicatorTest extends AbstractIndicatorTest<Indicator<Num>, Num
     }
 
     /**
-     * this will assert that choppiness is low if market price is trending significantly
+     * this will assert that choppiness is low if market price is trending
+     * significantly
      */
     @Test
     public void testTradeableTrend() {

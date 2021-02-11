@@ -85,7 +85,8 @@ public class NumTest extends AbstractIndicatorTest<Object, Num> {
     public void testPrecisionNumOffset() {
         String highPrecisionString = "1.928749238479283749238472398472936872364823749823749238749238749283749238472983749238749832749274";
         Num num = numOf(highPrecisionString, HIGH_PRECISION);
-        // upconvert num to PrecisionNum so that we don't throw ClassCastException in minus() from
+        // upconvert num to PrecisionNum so that we don't throw ClassCastException in
+        // minus() from
         // PrecisionNum.matches()
         Num lowerPrecisionNum = PrecisionNum.valueOf(num.toString(), 128);
         Num highPrecisionNum = PrecisionNum.valueOf(highPrecisionString, 128);
@@ -282,10 +283,13 @@ public class NumTest extends AbstractIndicatorTest<Object, Num> {
              * 
              * } else if (numOf(0).getClass().equals(BigDecimalNum.class)) {
              * assertNumEquals("1.7976931348623157000000000000000E+308", sqrt);
-             * assertNumNotEquals("1.7976931348623157000000000000001E+308", sqrt); assertNumEquals(Double.MAX_VALUE,
-             * sqrt); assertNumEquals(numOf(Double.MAX_VALUE), sqrt); BigDecimal sqrtBD = new
-             * BigDecimal(sqrt.toString()); assertNumEquals(numOf(numBD), numOf(sqrtBD.multiply(sqrtBD, new
-             * MathContext(99999, RoundingMode.HALF_UP)))); assertNumEquals(numOf(numBD), sqrt.multipliedBy(sqrt));
+             * assertNumNotEquals("1.7976931348623157000000000000001E+308", sqrt);
+             * assertNumEquals(Double.MAX_VALUE, sqrt);
+             * assertNumEquals(numOf(Double.MAX_VALUE), sqrt); BigDecimal sqrtBD = new
+             * BigDecimal(sqrt.toString()); assertNumEquals(numOf(numBD),
+             * numOf(sqrtBD.multiply(sqrtBD, new MathContext(99999,
+             * RoundingMode.HALF_UP)))); assertNumEquals(numOf(numBD),
+             * sqrt.multipliedBy(sqrt));
              */
         } else if (numOf(0).getClass().equals(PrecisionNum.class)) {
             Properties props = new Properties();

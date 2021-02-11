@@ -49,12 +49,10 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {
     /**
      * Constructor.
      * 
-     * @param series
-     *            a time series
-     * @param barCount
-     *            the number of bars used to calculate the average upper shadow
-     * @param factor
-     *            the factor used when checking if a candle has a very short upper shadow
+     * @param series   a time series
+     * @param barCount the number of bars used to calculate the average upper shadow
+     * @param factor   the factor used when checking if a candle has a very short
+     *                 upper shadow
      */
     public ThreeWhiteSoldiersIndicator(TimeSeries series, int barCount, Num factor) {
         super(series);
@@ -75,8 +73,7 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the bar/candle index
+     * @param index the bar/candle index
      * @return true if the bar/candle has a very short upper shadow, false otherwise
      */
     private boolean hasVeryShortUpperShadow(int index) {
@@ -88,8 +85,7 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the current bar/candle index
+     * @param index the current bar/candle index
      * @return true if the current bar/candle is growing, false otherwise
      */
     private boolean isGrowing(int index) {
@@ -107,8 +103,7 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {
     }
 
     /**
-     * @param index
-     *            the current bar/candle index
+     * @param index the current bar/candle index
      * @return true if the current bar/candle is a white soldier, false otherwise
      */
     private boolean isWhiteSoldier(int index) {

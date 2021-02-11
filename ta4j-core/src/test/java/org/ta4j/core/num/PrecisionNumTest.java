@@ -73,7 +73,8 @@ public class PrecisionNumTest {
             "1234567890"; // 120
     private static final Num FIRST_SUPER_PRECISION_NUM = PrecisionNum.valueOf(SUPER_PRECISION_STRING);
 
-    // override the auto-precision based on length of SUPER_PRECISION_STRING by passing a precision to valueOf()
+    // override the auto-precision based on length of SUPER_PRECISION_STRING by
+    // passing a precision to valueOf()
     private Function<Number, Num> superPrecisionFunc = (number -> PrecisionNum.valueOf(number.toString(), 256));
     // auto-set precision based on length of SUPER_PRECISION_STRING (120)
     private Function<Number, Num> precisionFunc = PrecisionNum::valueOf;

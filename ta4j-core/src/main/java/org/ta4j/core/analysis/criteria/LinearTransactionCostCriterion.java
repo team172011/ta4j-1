@@ -32,8 +32,8 @@ import org.ta4j.core.num.Num;
 /**
  * A linear transaction cost criterion.
  *
- * That criterion calculate the transaction cost according to an initial traded amount and a linear function defined by
- * a and b (a * x + b).
+ * That criterion calculate the transaction cost according to an initial traded
+ * amount and a linear function defined by a and b (a * x + b).
  */
 public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {
 
@@ -47,10 +47,9 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {
     /**
      * Constructor. (a * x)
      * 
-     * @param initialAmount
-     *            the initially traded amount
-     * @param a
-     *            the a coefficient (e.g. 0.005 for 0.5% per {@link Order order})
+     * @param initialAmount the initially traded amount
+     * @param a             the a coefficient (e.g. 0.005 for 0.5% per {@link Order
+     *                      order})
      */
     public LinearTransactionCostCriterion(double initialAmount, double a) {
         this(initialAmount, a, 0);
@@ -59,12 +58,11 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {
     /**
      * Constructor. (a * x + b)
      * 
-     * @param initialAmount
-     *            the initially traded amount
-     * @param a
-     *            the a coefficient (e.g. 0.005 for 0.5% per {@link Order order})
-     * @param b
-     *            the b constant (e.g. 0.2 for $0.2 per {@link Order order})
+     * @param initialAmount the initially traded amount
+     * @param a             the a coefficient (e.g. 0.005 for 0.5% per {@link Order
+     *                      order})
+     * @param b             the b constant (e.g. 0.2 for $0.2 per {@link Order
+     *                      order})
      */
     public LinearTransactionCostCriterion(double initialAmount, double a, double b) {
         this.initialAmount = initialAmount;
@@ -110,10 +108,8 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {
     }
 
     /**
-     * @param order
-     *            a trade order
-     * @param tradedAmount
-     *            the traded amount for the order
+     * @param order        a trade order
+     * @param tradedAmount the traded amount for the order
      * @return the absolute order cost
      */
     private Num getOrderCost(Order order, Num tradedAmount) {
@@ -125,12 +121,9 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {
     }
 
     /**
-     * @param series
-     *            the time series
-     * @param trade
-     *            a trade
-     * @param initialAmount
-     *            the initially traded amount for the trade
+     * @param series        the time series
+     * @param trade         a trade
+     * @param initialAmount the initially traded amount for the trade
      * @return the absolute total cost of all orders in the trade
      */
     private Num getTradeCost(TimeSeries series, Trade trade, Num initialAmount) {

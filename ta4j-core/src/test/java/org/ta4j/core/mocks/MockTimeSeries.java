@@ -72,7 +72,8 @@ public class MockTimeSeries extends BaseTimeSeries {
     private static List<Bar> doublesToBars(Function<Number, Num> nf, double... data) {
         ArrayList<Bar> bars = new ArrayList<>();
         for (int i = 0; i < data.length; i++) {
-            // bars.add(new MockBar(ZonedDateTime.now().with(ChronoField.MILLI_OF_SECOND, i), data[i]));
+            // bars.add(new MockBar(ZonedDateTime.now().with(ChronoField.MILLI_OF_SECOND,
+            // i), data[i]));
             bars.add(new MockBar(ZonedDateTime.now().minusSeconds((data.length + 1 - i)), data[i], nf));
         }
         return bars;

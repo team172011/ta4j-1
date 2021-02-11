@@ -47,10 +47,9 @@ public class AroonUpIndicator extends CachedIndicator<Num> {
     /**
      * Constructor.
      *
-     * @param maxValueIndicator
-     *            the indicator for the maximum price (default {@link HighPriceIndicator})
-     * @param barCount
-     *            the time frame
+     * @param maxValueIndicator the indicator for the maximum price (default
+     *                          {@link HighPriceIndicator})
+     * @param barCount          the time frame
      */
     public AroonUpIndicator(Indicator<Num> maxValueIndicator, int barCount) {
         super(maxValueIndicator);
@@ -64,10 +63,8 @@ public class AroonUpIndicator extends CachedIndicator<Num> {
     /**
      * Default Constructor that is using the maximum price
      *
-     * @param series
-     *            the time series
-     * @param barCount
-     *            the time frame
+     * @param series   the time series
+     * @param barCount the time frame
      */
     public AroonUpIndicator(TimeSeries series, int barCount) {
         this(new HighPriceIndicator(series), barCount);

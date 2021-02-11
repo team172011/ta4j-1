@@ -287,7 +287,7 @@ public class TimeSeriesTest extends AbstractIndicatorTest<TimeSeries, Num> {
         TestUtils.assertNumEquals(adding1, mxPrice.getValue(defaultSeries.getEndIndex())); // adding1 also new max
         TestUtils.assertNumEquals(currentMin, mnPrice.getValue(defaultSeries.getEndIndex())); // min stays same
         TestUtils.assertNumEquals(prevClose, prevValue.getValue(defaultSeries.getEndIndex())); // previous close stays
-                                                                                               // same
+        // same
 
         Num adding2 = numOf(0);
         defaultSeries.addPrice(adding2);
@@ -295,11 +295,12 @@ public class TimeSeriesTest extends AbstractIndicatorTest<TimeSeries, Num> {
         TestUtils.assertNumEquals(adding1, mxPrice.getValue(defaultSeries.getEndIndex())); // max stays 100
         TestUtils.assertNumEquals(adding2, mnPrice.getValue(defaultSeries.getEndIndex())); // min is new adding2
         TestUtils.assertNumEquals(prevClose, prevValue.getValue(defaultSeries.getEndIndex())); // previous close stays
-                                                                                               // same
+        // same
     }
 
     /**
-     * Tests if the {@link BaseTimeSeries#addTrade(Number, Number)} method works correct.
+     * Tests if the {@link BaseTimeSeries#addTrade(Number, Number)} method works
+     * correct.
      */
     @Test
     public void addTradeTest() {

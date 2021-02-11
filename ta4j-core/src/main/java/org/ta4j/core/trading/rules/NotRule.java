@@ -39,8 +39,7 @@ public class NotRule extends AbstractRule {
     /**
      * Constructor.
      *
-     * @param ruleToNegate
-     *            a trading rule to negate
+     * @param ruleToNegate a trading rule to negate
      */
     public NotRule(Rule ruleToNegate) {
         this.ruleToNegate = ruleToNegate;
